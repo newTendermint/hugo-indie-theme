@@ -1,20 +1,20 @@
-# hugo-indie-theme
+# Indy Academy Hugo Theme
 The Indie Academy hugo theme.
 
 ## Development
 
 ### Prerequisites
 
-`brew install node`
+```brew install node```
 
-`brew install yarn`
+```brew install yarn```
 
 ### Packages
 
-`yarn add --dev webpack extract-text-webpack-plugin css-loader file-loader style-loader postcss postcss-loader postcss-cssnext postcss-import`
+```yarn add --dev webpack extract-text-webpack-plugin css-loader file-loader style-loader postcss postcss-loader postcss-cssnext postcss-import```
 
-`yarn add flexboxgrid moment normalize.css`
+```yarn add flexboxgrid moment normalize.css```
 
 ### Build & Bundle
 
-`npm run build`
+```npm run build```
