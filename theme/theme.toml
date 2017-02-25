@@ -1,21 +1,27 @@
-# theme.toml template for a Hugo theme
-# See https://github.com/spf13/hugoThemes#themetoml for an example
-
 name = "Indie"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
-description = ""
-homepage = "http://siteforthistheme.com/"
-tags = ["", ""]
-features = ["", ""]
-min_version = 0.18
+licenselink = "https://github.com/onurakpolat/hugo-indie-theme/blob/master/LICENSE"
+description = "The most beautiful theme for Hugo"
+homepage = "https://github.com/onurakpolat/hugo-indie-theme"
+tags = ["design",
+        "blog",
+        "portfolio",
+        "responsive",
+        "amp",
+        "personal",
+        "startup",
+        "blog"
+        ]
+features = ["projects",
+            "flexboxgrid",
+            "responsive",
+            "analytics",
+            "blog",
+            "teaching",
+            "contact"
+            ]
+min_version = 0.19
 
 [author]
-  name = ""
-  homepage = ""
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
+  name = "Onur Akpolat"
+  homepage = "https://indie.academy/"
