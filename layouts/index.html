@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <p>Indie Academy says hello!</p>
+  {{- range (where .Data.Pages "Section" "project").Reverse }}
+    <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+  {{- end }}
 </body>
 </html>
