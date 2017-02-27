@@ -1,0 +1,4 @@
+languageCode = "en-us"
+title = "Indie Academy"
+baseurl = "http://localhost:1313"
+theme = "hugo-indie-theme"
