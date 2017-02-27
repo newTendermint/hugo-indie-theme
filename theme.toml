@@ -20,7 +20,7 @@ features = ["projects",
             "teaching",
             "contact"
             ]
-min_version = 0.19
+min_version = 0.18
 
 [author]
   name = "Onur Akpolat"
