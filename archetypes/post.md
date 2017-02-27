@@ -1,7 +1,7 @@
 +++
 tags = []
 
-# Optional featured image (relative to `static/img/` folder).
+# Optional featured image (relative to `static/assets/img/` folder).
 [header]
 image = ""
 caption = ""

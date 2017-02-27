@@ -22,7 +22,7 @@ module.exports = {
     ]
   },
   output: {
-    path: path.resolve(__dirname, 'static/js'),
+    path: path.resolve(__dirname, 'static/assets/js'),
     filename: '[name].js',
   },
   plugins: [
