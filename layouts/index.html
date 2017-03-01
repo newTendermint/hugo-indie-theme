@@ -1,8 +1,10 @@
-<!DOCTYPE html>
-<html>
-<body>
+{{ partial "header.html" . }}
+  <h2>Articles</h2>
   {{- range (where .Data.Pages "Section" "project").Reverse }}
     <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
   {{- end }}
-</body>
-</html>
+  <h2>Pages</h2>
+  {{- range (where .Data.Pages "Section" "page").Reverse }}
+    <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+  {{- end }}
+{{ partial "footer.html" . }}
