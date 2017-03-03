@@ -1,6 +1,12 @@
 +++
++++
 title = "Philosophy"
-date = "2017-02-27T02:04:27+01:00"
+
+# Optional featured image (relative to `static/assets/img/` folder).
+[header]
+image = ""
+caption = ""
++++
 
 +++
 
