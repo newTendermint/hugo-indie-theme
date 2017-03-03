@@ -1,4 +1,64 @@
+# Base config
 languageCode = "en-us"
+defaultContentLanguage = "en"
 title = "Indie Academy"
 baseurl = "http://localhost:1313"
 theme = "hugo-indie-theme"
+copyright = "&copy; 2017 Indie Academy"
+googleAnalytics = ""
+disqusShortname = ""
+enableEmoji = true
+sharing = true
+
+[taxonomies]
+	category = "categories"
+	tag = "tags"
+
+[params]
+	description = "Awesome Indie Academy Template"
+	author = "Onur Akpolat"
+	title = "Chief Troll Officer"
+	email = "hej@indie.academy"
+
+# Social accounts
+[[params.social]]
+	link = "mailto:hej@indie.academy"
+
+[[params.social]]
+	link = "//facebook.com/indieacademycrew"
+
+[[params.social]]
+ 	link = "//twitter.com/theindieacademy"
+
+[[params.social]]
+	link = "//github.com/indieacademy"
+
+# Navigation menu
+[[menu.main]]
+	name = "Projects"
+	url = "/projects/"
+	weight = 1
+
+[[menu.main]]
+	name = "Blog"
+	url = "/blog/"
+	weight = 2
+
+[[menu.main]]
+	name = "Philosophy"
+	url = "/philosophy/"
+	weight = 3
+
+[[menu.main]]
+	name = "FAQ"
+	url = "/faq/"
+	weight = 4
+
+[[menu.main]]
+	name = "Books"
+	url = "/books/"
+	weight = 5
+
+# Configure the English version of the website.
+[languages.en]
+	languageCode = "en-us"
