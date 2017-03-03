@@ -9,6 +9,8 @@
 	{{ with .Site.Params.name }}<meta name="author" content="{{ . }}">{{ end }}
 	{{ with .Site.Params.role }}<meta name="description" content="{{ . }}">{{ end }}
 
+	<script src="{{ "assets/js/app.js" | relURL }}"></script>
+
 	<title>{{ .Title }}</title>
 </head>
 <body>
