@@ -6,6 +6,7 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   entry: {
     app: './js/app.js',
+    autotrack: './js/autotrack.js',
   },
   module: {
     rules: [

@@ -1,4 +1,17 @@
 <!-- Google Analytics -->
 {{ with .Site.GoogleAnalytics }}
-{{ template "_internal/google_analytics_async.html" . }}
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', '{{ . }}', 'auto');
+
+// Additional plugin from autotrack
+ga('require', 'eventTracker');
+ga('require', 'outboundLinkTracker');
+ga('require', 'urlChangeTracker');
+
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+<script async src='static/assets/js/autotrack.js'></script>
 {{ end }}
+
