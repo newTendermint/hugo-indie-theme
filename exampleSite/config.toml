@@ -1,7 +1,6 @@
 # Base config
 languageCode = "en-us"
 defaultContentLanguage = "en"
-title = "Indie Academy"
 baseurl = "http://localhost:1313"
 theme = "hugo-indie-theme"
 copyright = "&copy; 2017 Indie Academy"
@@ -15,9 +14,9 @@ sharing = true
 	tag = "tags"
 
 [params]
+	title = "Indie Academy"
 	description = "Awesome Indie Academy Template"
 	author = "Onur Akpolat"
-	title = "Chief Troll Officer"
 	email = "hej@indie.academy"
 
 # Social accounts

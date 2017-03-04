@@ -1,0 +1,9 @@
+<nav>
+	<ul>
+		{{ range .Site.Menus.main }}
+		{{ range .Children }}
+		<li><a href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}></a>
+		{{end}}
+		{{ end }}
+	</ul>
+</nav>
