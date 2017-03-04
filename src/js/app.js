@@ -1,5 +1,5 @@
 import styles from '../css/main.css';
-import moment from './components/moments';
 import flexboxgrid from 'flexboxgrid';
 
-console.log(moment());
+// import moment from './components/moments';
+// console.log(moment());
