@@ -1,9 +1,20 @@
+<!-- Navigation -->
 <nav>
-	<ul>
-		{{ range .Site.Menus.main }}
-		{{ range .Children }}
-		<li><a href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}></a>
-		{{end}}
-		{{ end }}
-	</ul>
+  <ul>
+    {{ range .Site.Menus.main }}
+    {{ if .HasChildren }}
+    <li>
+      <a href="#">{{ .Name }}<span></span></a>
+      <ul>
+        {{ range .Children }}
+        <li><a href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}><span>{{ .Name }}</span></a></li>
+        {{ end }}
+      </ul>
+        </li>
+        {{ else }}
+        <li><a href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}><span>{{ .Name }}</span></a>
+        </li>
+        {{ end }}
+    {{ end }}
+  </ul>
 </nav>
