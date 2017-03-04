@@ -19,6 +19,11 @@ module.exports = {
           ]
         })
       },
+      {
+        test: /\.js$/,
+        exclude: /node_modules\/(?!(autotrack|dom-utils))/,
+        loader: 'babel-loader'
+      },
     ]
   },
   output: {
