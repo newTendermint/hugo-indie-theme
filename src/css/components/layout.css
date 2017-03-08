@@ -1,0 +1,11 @@
+body {
+  background-color: #E84545;
+  color: #53354A;
+  line-height: 2rem;
+  text-transform: uppercase;
+}
+.wrapper {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 2%;
+}
