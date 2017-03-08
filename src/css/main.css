@@ -1,8 +1,0 @@
-/* Shared */
-@import "shared/colors.css";
-@import "shared/typography.css";
-/* Components */
-@import "components/layout.css";
-@import "components/logo.css";
-@import "components/typography.css";
-@import "components/nav.css";

@@ -1,5 +1,6 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
+<main>
   <h2>Articles</h2>
   {{- range (where .Data.Pages "Section" "project").Reverse }}
     <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
@@ -8,4 +9,5 @@
   {{- range (where .Data.Pages "Section" "page").Reverse }}
     <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
   {{- end }}
+</main>
 {{ partial "footer.html" . }}
