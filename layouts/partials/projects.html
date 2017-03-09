@@ -1,0 +1,11 @@
+<main>
+  <div class="row center-xs">
+    <h2>Projects</h2>
+  </div>
+	<div class="row center-xs around-xs">
+        {{- range (where .Data.Pages "Section" "project").Reverse }}
+        <div class="col-xs">
+          <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+        </div>
+        {{- end }}
+ </main>
