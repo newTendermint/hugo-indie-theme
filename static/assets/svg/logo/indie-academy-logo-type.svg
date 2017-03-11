@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="381px" height="37px" viewBox="0 0 381 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>logo-text</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Projects-overview" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-weight="bold" font-family="FiraSans-Bold, Fira Sans" line-spacing="50" letter-spacing="3" font-size="50">
+        <g id="Desktop" transform="translate(-151.000000, -50.000000)" fill="#1CA8D3">
+            <g id="header" transform="translate(44.000000, 31.000000)">
+                <g id="logo">
+                    <text id="logo-text">
+                        <tspan x="104" y="72">INDIE ACADEM</tspan>
+                        <tspan x="458.55" y="72">Y</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

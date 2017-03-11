@@ -1,40 +1,72 @@
-<div class="container-fluid">
-	<header>
-		<section class="row middle-xs center-xs">
-			<!-- Logo -->
-			<div class="col-xs-12 col-lg-2">
-				<svg width="63px" height="63px" viewBox="-2 -2 63 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-					<desc>Indie Academy Logo</desc>
-					<defs></defs>
-					<g id="logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-						<path d="M29.5,59 C45.7924009,59 59,45.7924009 59,29.5 C59,13.2075991 45.7924009,0 29.5,0 C13.2075991,0 0,13.2075991 0,29.5 C0,45.7924009 13.2075991,59 29.5,59 Z" id="bg" stroke="#1CA8D3" stroke-width="3" fill="#F9F9F9"></path>
-						<text id="iA" font-family="AvenirNext-Bold, Avenir Next" font-size="36" font-weight="bold" fill="#1CA8D3">
-							<tspan x="11" y="41">iA</tspan>
-						</text>
-					</g>
-				</svg>
-			</div>
-			<!-- Navigation -->
-			<div class="col-xs-12 col-md-10 col-lg-offset-2 col-lg-8">
-				<nav>
-					<ul class="row around-xs between-xs">
-						{{ range .Site.Menus.main }}
-						{{ if .HasChildren }}
-						<li class="col-xs-12 col-lg">
-							<a href="#">{{ .Name }}<span></span></a>
-							<ul>
-								{{ range .Children }}
-								<li><a href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}><span>{{ .Name }}</span></a></li>
+<header>
+	<div class="content">
+		<div class="container-fluid">
+			<div class="header">
+				<section class="row middle-xs center-xs">
+					<!-- Logo -->
+					<div class="col-xs-12 col-lg-5">
+						<a href="/" class="row middle-xs">
+							<div class="col-xs-12 col-sm-5 end-sm col-lg-3">
+								<!-- Glyph -->
+								<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+									<desc>Created with Sketch.</desc>
+									<defs></defs>
+									<g id="logo-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+										<rect id="bg" fill="#1CA8D3" x="0" y="0" width="76" height="76"></rect>
+										<text id="IA" font-family="FiraSans-Bold, Fira Sans" font-size="40" font-weight="bold" line-spacing="40" letter-spacing="5" fill="#FFFFFF">
+											<tspan x="16" y="54">I</tspan>
+											<tspan x="34" y="54">A</tspan>
+										</text>
+									</g>
+								</svg>
+							</div>
+							<div class="col-xs-12 col-sm-6 col-lg-9 middle-xs start-sm logotype">Indie Academy</div>
+						</a>
+					</div>
+					<!-- Navigation -->
+					<div class="col-xs-12 col-md-10 col-lg-7">
+						<nav>
+							<ul class="row around-xs between-xs">
+								{{ range .Site.Menus.main }}
+								{{ if .HasChildren }}
+								<li class="col-xs-12 col-lg">
+									<a href="#">{{ .Name }}<span></span></a>
+									<ul>
+										{{ range .Children }}
+										<li><a href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}><span>{{ .Name }}</span></a></li>
+										{{ end }}
+									</ul>
+								</li>
+								{{ else }}
+								<li class="col-xs-12 col-sm col-md col-lg"><a href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}><span>{{ .Name }}</span></a>
+								</li>
+								{{ end }}
 								{{ end }}
 							</ul>
-						</li>
-						{{ else }}
-						<li class="col-xs-12 col-sm col-md col-lg"><a href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}><span>{{ .Name }}</span></a>
-						</li>
-						{{ end }}
-						{{ end }}
-					</ul>
-				</nav>
+						</nav>
+					</div>
+				</section>
+				<section class="row middle-xs center-xs">
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+
+				</section>
 			</div>
-		</section>
-	</header>
+		</div>
+	</div>
+</header>

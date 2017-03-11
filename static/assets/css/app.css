@@ -1,15 +1,49 @@
+* {
+	font-family: 'Fira Sans', sans-serif;
+}
+
+body, html {
+	background: rgb(245, 245, 245);
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+div.content {
+	height: 100%;
+	width: 100%;
+}
+
+header .header	 {
+	padding-top: 2rem;
+}
+
+header div.content{
+	background-image: linear-gradient(180deg , #F6FDFF, rgb(245, 245, 245))
+}
+
 header nav ul {
-  list-style-type: none;
-  padding: 0;
+	list-style-type: none;
+	padding: 0;
 }
 
 header nav ul li a {
-  color: #1CA8D3;
-  text-decoration: none;
-  transition: all .5s ease;
-  text-transform: uppercase;
+	color: #1CA8D3;
+	transition: all .5s ease;
+	text-transform: uppercase;
 }
 
 header nav ul li {
-  margin: 1rem auto;
+	margin: 1rem auto;
+}
+
+header a .logotype {
+	text-transform: uppercase;
+	color: #1CA8D3;
+	align-items: center;
+	font-weight: 700;
+	font-size: 2.2rem;
+	letter-spacing: .1rem;
 }
