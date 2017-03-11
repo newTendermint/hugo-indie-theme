@@ -64,3 +64,6 @@ typings/
 
 # Bundles, Dist, Assets
 dist/
+
+# Local development
+static/assets/css/_app.css
