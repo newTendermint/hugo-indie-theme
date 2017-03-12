@@ -90,6 +90,10 @@ header .header .hero {
 		margin-top: 0;
 	}
 
+	header .header nav ul{
+    	margin-top: 2rem;
+	}
+
 	header .header nav ul li {
     	padding: 0;
 	}
@@ -97,5 +101,12 @@ header .header .hero {
 	/*Hero*/
 	header .header .hero {
 		margin: 4rem auto;
+	}
+}
+
+/*lg*/
+@media only screen and (min-width: 75em) {
+	header .header nav ul{
+    	margin-top: 1rem;
 	}
 }
