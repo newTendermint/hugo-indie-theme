@@ -34,19 +34,92 @@ header .header nav ul {
 
 header .header nav ul li {
 	margin: 1rem auto;
-	font-size: 1.4rem;
     padding: 1rem 0;
 }
 
 header .header nav ul li a {
+	letter-spacing: .1rem;
+}
+
+header .header nav ul li:not(.subscribebtn) a {
 	color: #1CA8D3;
 	transition: all .5s ease;
 	text-transform: uppercase;
 	position: relative;
 }
 
+/*Subscribe button in navigation*/
+header .header nav ul li.subscribebtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: .5rem 0;
+}
+
+header .header nav ul li.subscribebtn a {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	background-image: linear-gradient(to right, #E040FB, #00BCD4);
+	border-radius: .3rem;
+	text-transform: uppercase;
+	font-size: 1rem;
+	box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
+	transition: all 0.4s ease;
+}
+
+header .header nav ul li.subscribebtn a span{
+	color: #FFF;
+	font-weight: 300;
+}
+
+/*header .header nav ul li.subscribebtn a:hover {
+	webkit-animation: gradient 3s ease infinite;
+	-moz-animation: gradient 3s ease infinite;
+	animation: gradient 3s ease infinite;
+}
+
+@-webkit-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@-moz-keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}*/
+
 /*Navigation Link Hover Effect*/
-header .header nav ul li a:before {
+header .header nav ul li:not(.subscribebtn) a:before {
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -73,7 +146,7 @@ header .header a .logotype {
 	color: #1CA8D3;
 	align-items: center;
 	font-weight: 700;
-	font-size: 2.2rem;
+	font-size: 1.4rem;
 	letter-spacing: .1rem;
 	margin-top: 1.6rem;
 }
@@ -108,5 +181,10 @@ header .header .hero {
 @media only screen and (min-width: 75em) {
 	header .header nav ul{
     	margin-top: 1rem;
+	}
+
+	/*Layout*/
+	main div.content .container {
+		max-width: 60rem;
 	}
 }
