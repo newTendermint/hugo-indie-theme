@@ -35,6 +35,9 @@ header .header nav ul {
 header .header nav ul li {
 	margin: 1rem auto;
     padding: 1rem 0;
+    display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 header .header nav ul li a {
@@ -50,15 +53,12 @@ header .header nav ul li:not(.subscribebtn) a {
 
 /*Subscribe button in navigation*/
 header .header nav ul li.subscribebtn {
-	display: flex;
-	align-items: center;
-	justify-content: center;
 	margin: .5rem 0;
 }
 
 header .header nav ul li.subscribebtn a {
 	height: 100%;
-	width: 100%;
+	width: 60%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -69,6 +69,7 @@ header .header nav ul li.subscribebtn a {
 	font-size: 1rem;
 	box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
 	transition: all 0.4s ease;
+	height: 10vh;
 }
 
 header .header nav ul li.subscribebtn a span{
@@ -174,6 +175,11 @@ header .header .hero {
 	/*Hero*/
 	header .header .hero {
 		margin: 4rem auto;
+	}
+
+	header .header nav ul li.subscribebtn a {
+		width: 100%;
+		height: 7vh;
 	}
 }
 
