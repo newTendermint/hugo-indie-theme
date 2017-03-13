@@ -34,8 +34,8 @@ header .header nav ul {
 
 header .header nav ul li {
 	margin: 1rem auto;
-    padding: 1rem 0;
-    display: flex;
+	padding: 1rem 0;
+	display: flex;
 	align-items: center;
 	justify-content: center;
 }
@@ -165,11 +165,11 @@ header .header .hero {
 	}
 
 	header .header nav ul{
-    	margin-top: 2rem;
+		margin-top: 2rem;
 	}
 
 	header .header nav ul li {
-    	padding: 0;
+		padding: 0;
 	}
 
 	/*Hero*/
@@ -186,7 +186,7 @@ header .header .hero {
 /*lg*/
 @media only screen and (min-width: 75em) {
 	header .header nav ul{
-    	margin-top: 1rem;
+		margin-top: 1rem;
 	}
 
 	/*Layout*/
