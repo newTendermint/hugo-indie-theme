@@ -216,7 +216,7 @@ header .newsletter .newsletterform .newsletterfields button[type="submit"].butto
 main section.project {
 	margin: 2rem 0;
 	padding: 0 0 1rem 0;
-  	border-radius: 8px;
+	border-radius: 8px;
 	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
 	cursor: pointer;
 	webkit-transition: all .2s ease;
@@ -230,6 +230,8 @@ main section.project:hover {
 
 main section.project header {
 	background-image: linear-gradient(to right, #1CA8D3, #00BCD4);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
 	position: relative;
 }
 
