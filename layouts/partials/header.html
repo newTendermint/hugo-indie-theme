@@ -1,86 +1,87 @@
 <header>
 	<div class="content">
+		<!-- Particles Canvas -->
+		<canvas id="particles"></canvas>
+		<canvas id="blurCanvas"></canvas>
 		<div class="container container-fluid">
-			<div class="header">
-				<section class="row center-xs middle-xs">
-					<!-- Logo -->
-					<div class="col-xs-12 col-lg-4">
-						<a href="/" class="row middle-xs">
-							<div class="col-xs-12 col-sm-5 center-lg end-sm col-lg-2">
-								<!-- Glyph -->
-								<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-									<desc>Created with Sketch.</desc>
-									<defs></defs>
-									<g id="logo-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-										<rect id="bg" fill="#1CA8D3" x="0" y="0" width="54" height="54"></rect>
-										<text id="IA" font-family="FiraSans-Bold, Fira Sans" font-size="36" font-weight="bold" line-spacing="36" letter-spacing="5" fill="#FFFFFF">
-											<tspan x="9" y="42">I</tspan>
-											<tspan x="24" y="42">A</tspan>
-										</text>
-									</g>
-								</svg>
-							</div>
-							<!-- Type -->
-							<div class="col-xs-12 col-sm-6 col-lg-9 bottom-xs middle-sm start-sm logotype">Indie Academy</div>
-						</a>
-					</div>
-					<!-- Navigation -->
-					<div class="col-xs-12 col-md-10 col-lg-8">
-						<nav>
-							<ul class="row">
-								{{ range .Site.Menus.main }}
-								{{ if .HasChildren }}
-								<li class="col-xs-12 col-lg">
-									<a href="#">{{ .Name }}<span></span></a>
-									<ul>
-										{{ range .Children }}
-										<li><a href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>{{ .Pre }}<span>{{ .Name }}</span></a></li>
-										{{ end }}
-									</ul>
-								</li>
-								{{ else }}
-								<li class="col-xs-12 col-sm col-md col-lg {{ .Identifier }}"><a href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>{{ if eq .Identifier "subscribebtn" }}
-									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24"><g >
-										<path data-color="color-2" fill="#ffffff" d="M23,2H1C0.4,2,0,2.4,0,3v3c0,0.4,0.2,0.7,0.5,0.9l11,6C11.7,13,11.8,13,12,13s0.3,0,0.5-0.1
-										l11-6C23.8,6.7,24,6.4,24,6V3C24,2.4,23.6,2,23,2z"/>
-										<path fill="#ffffff" d="M13.4,14.6C13,14.9,12.5,15,12,15s-1-0.1-1.4-0.4L0,8.9V21c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V8.9
-										L13.4,14.6z"/>
-									</g></svg>
-									{{ end }}{{ .Pre }}<span>{{ .Name }}</span></a>
-								</li>
-								{{ end }}
-								{{ end }}
-							</ul>
-						</nav>
-					</div>
-				</section>
-				<section class="row middle-xs center-xs hero">
-					<h1 class="col-xs-12">{{ .Title }}</h1>
-					<p class="col-xs-12">{{ .Description }}</p>
-				</section>
-				{{ if .Site.Params.newsletter }}
-				{{ with .Site.Params.mailchimp }}
-				<section class="row middle-xs center-xs newsletter">
-					<!-- Newsletter -->
-					<div class="newsletterform">
-						<form action="{{ . }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-							<div class="row bottom-xs center-xs newsletterfields">
-								<h2 class="col-xs-12">Join our community to get the latest to your inbox.</h2>
-								<input type="email" placeholder="Enter email address" name="EMAIL" class="col-xs-12 col-sm-8 col-md-6 required email" id="mce-EMAIL" required>
-								<button type="submit" value=">" name="subscribe" id="mc-embedded-subscribe" class="col-xs-12	 col-sm-2 col-md-1 button">
-									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="36px" height="36px" viewBox="0 0 48 48"><g  transform="translate(0, 0)">
-										<path fill="#ffffff" d="M3.4,21l6.3,4.8l12.9-6.6c0.5-0.3,1,0.5,0.5,0.8L13,28.2h0l0,0v14c0,0.9,1.2,1.4,1.8,0.6l6.9-8.2L35.4,45&#10;&#9;c0.6,0.4,1.4,0.1,1.6-0.6l8-40c0.2-0.8-0.6-1.4-1.4-1.1l-40,16C2.9,19.6,2.8,20.6,3.4,21z"/>
-									</g></svg>
-								</button>
-								<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-								<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e13eb956f39adfc0167aba5e0_aac458223f" tabindex="-1" value=""></div>
-							</div>
-						</form>
-					</div>
-				</section>
-				{{ end }}
-				{{ end }}
-			</div>
+			<section class="row center-xs middle-xs">
+				<!-- Logo -->
+				<div class="col-xs-12 col-lg-4">
+					<a href="/" class="row middle-xs">
+						<div class="col-xs-12 col-sm-5 center-lg end-sm col-lg-2">
+							<!-- Glyph -->
+							<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+								<desc>Created with Sketch.</desc>
+								<defs></defs>
+								<g id="logo-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+									<rect id="bg" fill="#1CA8D3" x="0" y="0" width="54" height="54"></rect>
+									<text id="IA" font-family="FiraSans-Bold, Fira Sans" font-size="36" font-weight="bold" line-spacing="36" letter-spacing="5" fill="#FFFFFF">
+										<tspan x="9" y="42">I</tspan>
+										<tspan x="24" y="42">A</tspan>
+									</text>
+								</g>
+							</svg>
+						</div>
+						<!-- Type -->
+						<div class="col-xs-12 col-sm-6 col-lg-9 bottom-xs middle-sm start-sm logotype">Indie Academy</div>
+					</a>
+				</div>
+				<!-- Navigation -->
+				<div class="col-xs-12 col-md-10 col-lg-8">
+					<nav>
+						<ul class="row">
+							{{ range .Site.Menus.main }}
+							{{ if .HasChildren }}
+							<li class="col-xs-12 col-lg">
+								<a href="#">{{ .Name }}<span></span></a>
+								<ul>
+									{{ range .Children }}
+									<li><a href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>{{ .Pre }}<span>{{ .Name }}</span></a></li>
+									{{ end }}
+								</ul>
+							</li>
+							{{ else }}
+							<li class="col-xs-12 col-sm col-md col-lg {{ .Identifier }}"><a href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>{{ if eq .Identifier "subscribebtn" }}
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24"><g >
+									<path data-color="color-2" fill="#ffffff" d="M23,2H1C0.4,2,0,2.4,0,3v3c0,0.4,0.2,0.7,0.5,0.9l11,6C11.7,13,11.8,13,12,13s0.3,0,0.5-0.1
+									l11-6C23.8,6.7,24,6.4,24,6V3C24,2.4,23.6,2,23,2z"/>
+									<path fill="#ffffff" d="M13.4,14.6C13,14.9,12.5,15,12,15s-1-0.1-1.4-0.4L0,8.9V21c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V8.9
+									L13.4,14.6z"/>
+								</g></svg>
+								{{ end }}{{ .Pre }}<span>{{ .Name }}</span></a>
+							</li>
+							{{ end }}
+							{{ end }}
+						</ul>
+					</nav>
+				</div>
+			</section>
+			<section class="row middle-xs center-xs hero">
+				<h1 class="col-xs-12">{{ .Title }}</h1>
+				<p class="col-xs-12">{{ .Description }}</p>
+			</section>
+			{{ if .Site.Params.newsletter }}
+			{{ with .Site.Params.mailchimp }}
+			<section class="row middle-xs center-xs newsletter">
+				<!-- Newsletter -->
+				<div class="newsletterform">
+					<form action="{{ . }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+						<div class="row bottom-xs center-xs newsletterfields">
+							<h2 class="col-xs-12">Join our community to get the latest to your inbox.</h2>
+							<input type="email" placeholder="Enter email address" name="EMAIL" class="col-xs-12 col-sm-8 col-md-6 required email" id="mce-EMAIL" required>
+							<button type="submit" value=">" name="subscribe" id="mc-embedded-subscribe" class="col-xs-12	 col-sm-2 col-md-1 button">
+								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="36px" height="36px" viewBox="0 0 48 48"><g  transform="translate(0, 0)">
+									<path fill="#ffffff" d="M3.4,21l6.3,4.8l12.9-6.6c0.5-0.3,1,0.5,0.5,0.8L13,28.2h0l0,0v14c0,0.9,1.2,1.4,1.8,0.6l6.9-8.2L35.4,45&#10;&#9;c0.6,0.4,1.4,0.1,1.6-0.6l8-40c0.2-0.8-0.6-1.4-1.4-1.1l-40,16C2.9,19.6,2.8,20.6,3.4,21z"/>
+								</g></svg>
+							</button>
+							<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+							<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e13eb956f39adfc0167aba5e0_aac458223f" tabindex="-1" value=""></div>
+						</div>
+					</form>
+				</div>
+			</section>
+			{{ end }}
+			{{ end }}
 		</div>
 	</div>
 </header>

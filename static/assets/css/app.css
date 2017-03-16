@@ -15,22 +15,39 @@ a {
 div.content {
 	height: 100%;
 	width: 100%;
+	position:relative;
+	z-index: 0;
+}
+
+/*Main*/
+header div.content canvas#blurCanvas {
+	height: 0;
 }
 
 /*Header*/
-header div.content{
+header div.content canvas#particles {
+	width: 100%;
+ 	height: 100%;
+ 	left:0%;
+	top:0%;
+	position:absolute;
+	z-index: -1;
+}
+
+/*Header*/
+header div.content {
 	background-image: linear-gradient(180deg , #F6FDFF, rgb(245, 245, 245))
 }
 
-header .header .hero, .newsletterform{
+header .hero, .newsletterform {
 	width: 80%;
 }
 
-header .header .hero h1 {
+header .hero h1 {
 	color: rgba(74, 74, 74, 1);
 }
 
-header .header .hero p {
+header .hero p {
 	color: rgba(74, 74, 74, .8);
 	font-size: 1.2rem;
 	line-height: 1.6rem;
@@ -38,13 +55,13 @@ header .header .hero p {
 	letter-spacing: .02rem;
 }
 
-header .header nav ul {
+header nav ul {
 	list-style-type: none;
 	padding: 0;
 	transition: all 1s ease;
 }
 
-header .header nav ul li {
+header nav ul li {
 	margin: 1rem auto;
 	padding: 1rem 0;
 	display: flex;
@@ -52,11 +69,11 @@ header .header nav ul li {
 	justify-content: center;
 }
 
-header .header nav ul li a {
+header nav ul li a {
 	letter-spacing: .1rem;
 }
 
-header .header nav ul li:not(.subscribebtn) a {
+header nav ul li:not(.subscribebtn) a {
 	color: #1CA8D3;
 	transition: all .5s ease;
 	text-transform: uppercase;
@@ -64,15 +81,15 @@ header .header nav ul li:not(.subscribebtn) a {
 }
 
 /*Subscribe button in navigation*/
-header .header nav ul li.subscribebtn {
+header nav ul li.subscribebtn {
 	margin: .5rem 0;
 }
 
-header .header nav ul li.subscribebtn a svg{
+header nav ul li.subscribebtn a svg{
 	margin-right: .4rem;
 }
 
-header .header nav ul li.subscribebtn a {
+header nav ul li.subscribebtn a {
 	white-space: nowrap;
 	display: flex;
 	align-items: center;
@@ -91,13 +108,13 @@ header .header nav ul li.subscribebtn a {
 	transition: all .2s ease;
 }
 
-header .header nav ul li.subscribebtn a:hover {
+header nav ul li.subscribebtn a:hover {
 	transform: translateY(-1px);
 	background-image: linear-gradient(to right, #00BCD4, #1CA8D3);
 	box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
 }
 
-header .header nav ul li.subscribebtn a:active {
+header nav ul li.subscribebtn a:active {
 	color: #1CA8D3;
 	background-image: linear-gradient(to right, #f6f9ff, #f6f9ff);
 	transform: translateY(1px);
@@ -105,7 +122,7 @@ header .header nav ul li.subscribebtn a:active {
 }
 
 /*Navigation Link Hover Effect*/
-header .header nav ul li:not(.subscribebtn) a:before {
+header nav ul li:not(.subscribebtn) a:before {
 	content: "";
 	position: absolute;
 	width: 100%;
@@ -120,14 +137,14 @@ header .header nav ul li:not(.subscribebtn) a:before {
 	transition: all 0.3s ease-in-out 0s;
 }
 
-header .header nav ul li a:hover:before {
+header nav ul li a:hover:before {
 	visibility: visible;
 	webkit-transform: scaleX(1);
 	transform: scaleX(1);
 }
 
 /*Logo Type*/
-header .header a .logotype {
+header a .logotype {
 	text-transform: uppercase;
 	color: #1CA8D3;
 	align-items: center;
@@ -138,17 +155,21 @@ header .header a .logotype {
 }
 
 /*Hero*/
-header .header .hero {
+header .hero {
 	margin: 1rem auto;
 }
 
 /*Newsletter*/
-header .header .newsletter .newsletterform .newsletterfields h2 {
+header .newsletter {
+	margin-bottom: 4rem;
+}
+
+header .newsletter .newsletterform .newsletterfields h2 {
 	color: #3DC2E7;
 	letter-spacing: .01rem;
 }
 
-header .header .newsletter .newsletterform .newsletterfields input[type="email"].email {
+header .newsletter .newsletterform .newsletterfields input[type="email"].email {
 	text-align: center;
 	color: rgba(74, 74, 74, .8);
 	line-height: 1.6rem;
@@ -161,14 +182,14 @@ header .header .newsletter .newsletterform .newsletterfields input[type="email"]
 	border-right: none;
 	border-bottom: .2rem #3DC2E7 solid;
 	width: 80%;
-	height: 4rem;
+	height: 3rem;
 }
 
-header .header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus {
+header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus {
 	outline: none;
 }
 
-header .header .newsletter .newsletterform .newsletterfields button[type="submit"].button {
+header .newsletter .newsletterform .newsletterfields button[type="submit"].button {
 	margin-top: 1rem;
 	border: none;
 	cursor: pointer;
@@ -185,7 +206,7 @@ header .header .newsletter .newsletterform .newsletterfields button[type="submit
 	transition: all .2s ease;
 }
 
-header .header .newsletter .newsletterform .newsletterfields button[type="submit"].button:hover {
+header .newsletter .newsletterform .newsletterfields button[type="submit"].button:hover {
 	background-image: linear-gradient(to right, #00BCD4, #1CA8D3);
 	box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
 }
@@ -193,29 +214,29 @@ header .header .newsletter .newsletterform .newsletterfields button[type="submit
 /*sm*/
 @media only screen and (min-width: 48em) {
 
-	header .header a .logotype {
+	header a .logotype {
 		margin-top: 0;
 	}
 
-	header .header nav ul{
+	header nav ul{
 		margin-top: 2rem;
 	}
 
-	header .header nav ul li {
+	header nav ul li {
 		padding: 0;
 	}
 
 	/*Hero*/
-	header .header .hero {
+	header .hero {
 		margin: 2rem auto;
 	}
 
-	header .header nav ul li.subscribebtn a {
+	header nav ul li.subscribebtn a {
 		height: 2.4rem;
 		margin-left: 2rem;
 	}
 
-	header .header .newsletter .newsletterform .newsletterfields input[type="email"].email {
+	header .newsletter .newsletterform .newsletterfields input[type="email"].email {
 		width: 60%;
 	}
 }
@@ -223,12 +244,12 @@ header .header .newsletter .newsletterform .newsletterfields button[type="submit
 /*md*/
 @media only screen and (min-width: 64em) {
 
-	header .header nav ul li.subscribebtn a {
+	header nav ul li.subscribebtn a {
 		width: 100%;
 		height: 2.4rem;
 	}
 
-	header .header .newsletter .newsletterform .newsletterfields input[type="email"].email {
+	header .newsletter .newsletterform .newsletterfields input[type="email"].email {
 		width: 40%;
 	}
 }
@@ -237,7 +258,7 @@ header .header .newsletter .newsletterform .newsletterfields button[type="submit
 /*lg*/
 @media only screen and (min-width: 75em) {
 
-	header .header nav ul{
+	header nav ul{
 		margin-top: 1rem;
 	}
 
@@ -250,7 +271,7 @@ header .header .newsletter .newsletterform .newsletterfields button[type="submit
 		max-width: 60rem;
 	}
 
-	header .header .hero{
+	header .hero{
 		width: 50%;
 	}
 
