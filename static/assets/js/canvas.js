@@ -13,13 +13,11 @@ var ww = w.innerWidth || e.clientWidth || g.clientWidth;
 var wh = w.innerHeight|| e.clientHeight|| g.clientHeight;
 canvas.width = ww;
 canvas.height= wh;
-var partCount = 16;
+var partCount = 25;
 var particles = [];
 
 function getDefinedColor() {
-  var colors = ['rgba(100,200,220,'+ Math.random()+')',
-                'rgba(200,140,200,'+ Math.random()+')',
-                'rgba(rgba(44, 62, 80,1.0),'+ Math.random()+')'];
+  var colors = ['rgba(100,200,220,'+ (Math.random()-0.3)+')'];
   var random = Math.floor(Math.random() * colors.length)
   return colors[random];
 }
@@ -33,9 +31,9 @@ function particle(){
     "x": -1 + Math.random() * 2,
     "y": -1 + Math.random() * 2
   };
-  this.vx = 1.8 * Math.random();
-  this.vy = 1.8 * Math.random();
-  this.radius = randomInt(8,5);
+  this.vx = 0.9 * Math.random();
+  this.vy = 0.9 * Math.random();
+  this.radius = randomInt(4,3);
   this.float = function(){
     this.x += this.vx * this.direction.x;
     this.y += this.vy * this.direction.y;

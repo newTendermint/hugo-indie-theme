@@ -11,11 +11,10 @@
 						<div class="col-xs-12 col-sm-5 center-lg end-sm col-lg-2">
 							<!-- Glyph -->
 							<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-								<desc>Created with Sketch.</desc>
 								<defs></defs>
 								<g id="logo-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 									<rect id="bg" fill="#1CA8D3" x="0" y="0" width="54" height="54"></rect>
-									<text id="IA" font-family="FiraSans-Bold, Fira Sans" font-size="36" font-weight="bold" line-spacing="36" letter-spacing="5" fill="#FFFFFF">
+									<text id="IA" font-family="FiraSans-Bold, Fira Sans" font-size="36" font-weight="bold" letter-spacing="5" fill="#FFFFFF">
 										<tspan x="9" y="42">I</tspan>
 										<tspan x="24" y="42">A</tspan>
 									</text>
@@ -62,8 +61,8 @@
 			</section>
 			{{ if .Site.Params.newsletter }}
 			{{ with .Site.Params.mailchimp }}
+			<!-- Newsletter -->
 			<section class="row middle-xs center-xs newsletter">
-				<!-- Newsletter -->
 				<div class="newsletterform">
 					<form action="{{ . }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 						<div class="row bottom-xs center-xs newsletterfields">
