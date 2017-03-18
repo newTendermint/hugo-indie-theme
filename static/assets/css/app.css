@@ -165,6 +165,24 @@ header .newsletter {
 	margin-bottom: 4rem;
 }
 
+header .newsletter .newsletterform .newsletterfields{
+	position: relative;
+}
+
+header .newsletter .newsletterform .newsletterfields label.emaillabel{
+	position:absolute;
+	top: 48%;
+	font-weight: 300;
+	letter-spacing: .02rem;
+	font-size: 1.2rem;
+	line-height: 1.2rem;
+	text-align: center;
+	color: rgba(74, 74, 74, .8);
+	transition: all 0.5s ease;
+	pointer-events: none;
+}
+
+
 header .newsletter .newsletterform .newsletterfields h2 {
 	color: #3DC2E7;
 	letter-spacing: .01rem;
@@ -172,11 +190,11 @@ header .newsletter .newsletterform .newsletterfields h2 {
 
 header .newsletter .newsletterform .newsletterfields input[type="email"].email {
 	text-align: center;
-	color: rgba(74, 74, 74, .8);
-	line-height: 1.6rem;
+	color: rgba(52, 73, 94, .8);
 	font-weight: 300;
 	letter-spacing: .02rem;
 	font-size: 1.2rem;
+	line-height: 1.2rem;
 	background-color: rgba(0, 0, 0, 0);
 	border-top: none;
 	border-left: none;
@@ -184,10 +202,21 @@ header .newsletter .newsletterform .newsletterfields input[type="email"].email {
 	border-bottom: .2rem #3DC2E7 solid;
 	width: 80%;
 	height: 3rem;
+	webkit-transition: all .4s ease;
+	transition: all .4s ease;
 }
 
 header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus {
 	outline: none;
+	box-shadow: 0 3px 0 rgba(50, 50, 93, .08);
+	/*TODO: Max same color as button shadow*/
+}
+
+header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
+	color: rgba(74, 74, 74, .4);
+	top: 38%;
+	font-size: .8rem;
+	line-height: .8rem;
 }
 
 header .newsletter .newsletterform .newsletterfields button[type="submit"].button {
@@ -318,6 +347,17 @@ main section.project span.goal {
 	header .newsletter .newsletterform .newsletterfields input[type="email"].email {
 		width: 60%;
 	}
+
+	header .newsletter .newsletterform .newsletterfields label.emaillabel {
+		left: 32%;
+		top: 75%;
+	}
+
+	header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
+		top: 60%;
+		font-size: 1rem;
+		line-height: 1rem;
+	}
 }
 
 /*md*/
@@ -330,6 +370,10 @@ main section.project span.goal {
 
 	header .newsletter .newsletterform .newsletterfields input[type="email"].email {
 		width: 40%;
+	}
+
+	header .newsletter .newsletterform .newsletterfields label.emaillabel {
+		left: 35%;
 	}
 }
 
@@ -352,6 +396,10 @@ main section.project span.goal {
 
 	header .hero{
 		width: 50%;
+	}
+
+	header .newsletter .newsletterform .newsletterfields label.emaillabel {
+		left: 38%;
 	}
 
 }
