@@ -174,7 +174,7 @@ header .newsletter .newsletterform h2 {
 
 /*Email Input*/
 header .newsletter .newsletterform .newsletterfields input[type="email"].email {
-	text-align: center;
+	/*text-align: center;*/
 	color: rgba(52, 73, 94, .8);
 	font-weight: 300;
 	letter-spacing: .02rem;
@@ -188,6 +188,7 @@ header .newsletter .newsletterform .newsletterfields input[type="email"].email {
 	width: 80%;
 	height: 4rem;
 	padding-top: .8rem;
+	padding-left: 1rem;
 	transition: all .4s ease;
 }
 
@@ -199,6 +200,7 @@ header .newsletter .newsletterform .newsletterfields input[type="email"].email:f
 /*Email Label*/
 header .newsletter .newsletterform .newsletterfields label.emaillabel{
 	position: absolute;
+	left: 14rem;
 	top: 1.6rem;
 	font-weight: 300;
 	letter-spacing: .02rem;
@@ -212,6 +214,7 @@ header .newsletter .newsletterform .newsletterfields label.emaillabel{
     -webkit-overflow-scrolling:touch;
     white-space: nowrap;
     border-right: 2px solid #e1ecf4;
+    z-index: -2;
 }
 
 header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
@@ -352,7 +355,7 @@ main section.project span.goal {
 
 	header .newsletter .newsletterform .newsletterfields label.emaillabel {
 		top: 2.6rem;
-		/*left: 32vw;*/
+/*		left: 32vw;*/
 	}
 
 	header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
