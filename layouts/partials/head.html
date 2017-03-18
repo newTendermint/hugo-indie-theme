@@ -14,4 +14,9 @@
 	<link href="{{ "assets/css/app.css" | relURL }}" rel="stylesheet">
 	<title>{{ .Title }}</title>
 </head>
-<body>
+{{ if .IsHome }}
+<body class="home">
+{{else}}
+<body class="{{ .Section }}">
+{{ end }}
+

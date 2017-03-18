@@ -27,8 +27,8 @@ header div.content canvas#blurCanvas {
 /*Header*/
 header div.content canvas#particles {
 	width: 100%;
- 	height: 100%;
- 	left:0%;
+	height: 100%;
+	left:0%;
 	top:0%;
 	position:absolute;
 	z-index: -1;
@@ -37,7 +37,7 @@ header div.content canvas#particles {
 
 /*Header*/
 header div.content {
-	background-image: linear-gradient(180deg , #F6FDFF, rgb(255, 255, 255))
+	background-image: linear-gradient(180deg , #F6FDFF, rgb(250, 254, 255))
 }
 
 header .hero h1 {
@@ -52,6 +52,7 @@ header .hero p {
 	letter-spacing: .02rem;
 }
 
+/*Nav*/
 header nav ul {
 	list-style-type: none;
 	padding: 0;
@@ -75,6 +76,43 @@ header nav ul li:not(.subscribebtn) a {
 	transition: all .5s ease;
 	text-transform: uppercase;
 	position: relative;
+}
+
+/*Highlight current sites*/
+.home header nav ul li.projects a:after,
+.blog header nav ul li.blog a:after,
+.philosophy header nav ul li.philosophy a:after,
+.faq header nav ul li.faq a:after{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: .25rem;
+	top: -.5rem;
+	left: 0;
+	background-color: #1CA8D3;
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+/*Navigation Link Hover Effect*/
+header nav ul li:not(.subscribebtn) a:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: .2rem;
+	bottom: -.4rem;
+	left: 0;
+	background-color: #1CA8D3;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+header nav ul li a:hover:before {
+	visibility: visible;
+	transform: scaleX(1);
 }
 
 /*Subscribe button in navigation*/
@@ -117,27 +155,6 @@ header nav ul li.subscribebtn a:active {
 	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
 }
 
-/*Navigation Link Hover Effect*/
-header nav ul li:not(.subscribebtn) a:before {
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: .2rem;
-	bottom: -.4rem;
-	left: 0;
-	background-color: #1CA8D3;
-	visibility: hidden;
-	-webkit-transform: scaleX(0);
-	transform: scaleX(0);
-	-webkit-transition: all 0.3s ease-in-out 0s;
-	transition: all 0.3s ease-in-out 0s;
-}
-
-header nav ul li a:hover:before {
-	visibility: visible;
-	transform: scaleX(1);
-}
-
 /*Logo Type*/
 header a .logotype {
 	text-transform: uppercase;
@@ -159,17 +176,25 @@ header .newsletter {
 	margin-bottom: 4rem;
 }
 
-header .newsletter .newsletterform .newsletterfields{
+header .newsletter .newsletterform .newsletterfields,
+header .newslettermodal .newsletterform .newsletterfields {
 	position: relative;
 }
 
-header .newsletter .newsletterform h2 {
+header .newsletter .newsletterform h2,
+header .newslettermodal .newsletterform h2 {
 	color: #3DC2E7;
 	letter-spacing: .01rem;
 }
 
+header .newslettermodal .newsletterform {
+	padding-top: 1.8rem;
+	padding-bottom: 3rem;
+}
+
 /*Email Input*/
-header .newsletter .newsletterform .newsletterfields input[type="email"].email {
+header .newsletter .newsletterform .newsletterfields input[type="email"].email,
+header .newslettermodal .newsletterform .newsletterfields input[type="email"].email {
 	color: rgba(52, 73, 94, .8);
 	font-weight: 600;
 	letter-spacing: .02rem;
@@ -186,14 +211,16 @@ header .newsletter .newsletterform .newsletterfields input[type="email"].email {
 	transition: all .4s ease;
 }
 
-header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus {
+header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus,
+header .newslettermodal .newsletterform .newsletterfields input[type="email"].email:focus {
 	outline: none;
 	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
 	padding-left: 1rem;
 }
 
 /*Email Label*/
-header .newsletter .newsletterform .newsletterfields label.emaillabel {
+header .newsletter .newsletterform .newsletterfields label.emaillabel,
+header .newslettermodal .newsletterform .newsletterfields label.emaillabel {
 	position: absolute;
 	top: 1.6rem;
 	left: .4rem;
@@ -204,15 +231,16 @@ header .newsletter .newsletterform .newsletterfields label.emaillabel {
 	text-align: center;
 	color: rgba(74, 74, 74, .8);
 	transition: all 0.5s ease;
-	animation: type 8s steps(36) infinite, blink .5s infinite;
-    overflow: hidden;
-    -webkit-overflow-scrolling:touch;
-    white-space: nowrap;
-    border-right: 2px solid #e1ecf4;
-    z-index: -2;
+	animation: type 8s steps(36) infinite, blink .8s infinite;
+	overflow: hidden;
+	-webkit-overflow-scrolling:touch;
+	white-space: nowrap;
+	border-right: 2px solid #e1ecf4;
+	z-index: -2;
 }
 
-header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
+header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel,
+header .newslettermodal .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
 	color: rgba(74, 74, 74, .4);
 	top: .4rem;
 	font-size: .8rem;
@@ -221,7 +249,8 @@ header .newsletter .newsletterform .newsletterfields input[type="email"].email:f
 	border: none;
 }
 
-header .newsletter .newsletterform .newsletterfields button[type="submit"].button {
+header .newsletter .newsletterform .newsletterfields button[type="submit"].button,
+header .newslettermodal .newsletterform .newsletterfields button[type="submit"].button {
 	margin-top: 1rem;
 	border: none;
 	cursor: pointer;
@@ -237,7 +266,8 @@ header .newsletter .newsletterform .newsletterfields button[type="submit"].butto
 	transition: all .2s ease;
 }
 
-header .newsletter .newsletterform .newsletterfields button[type="submit"].button:hover {
+header .newsletter .newsletterform .newsletterfields button[type="submit"].button:hover,
+header .newslettermodal .newsletterform .newsletterfields button[type="submit"].button:hover {
 	background-image: linear-gradient(to right, #00BCD4, #1CA8D3);
 	box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
 }
@@ -349,14 +379,16 @@ main section.project span.goal {
 		left: 3.2rem;
 	}
 
-	header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
+	header .newslettermodal .newsletterform .newsletterfields label.emaillabel {
+		top: 2.7rem;
+		left: 2.7rem;
+	}
+
+	header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel,
+	header .newslettermodal .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
 		top: 1.2rem;
 		font-size: 1rem;
 		line-height: 1.2rem;
-	}
-
-	header .newsletter .newsletterform .newsletterfields label.emaillabel {
-		left: 3.2rem;
 	}
 }
 
@@ -394,24 +426,112 @@ main section.project span.goal {
 	}
 }
 
+/*Newsletter Modal*/
+.modalNewsletter {
+	position: fixed;
+	left: 0;
+	background: rgba(0,0,0, 0.85);
+	width: 100vw;
+	height: 100vh;
+	opacity: 0;
+	-webkit-transition: opacity  0.4s ease;
+	transition: opacity 0.4s ease;
+}
+
+.modalNewsletter .modalContainer {
+	width: 100%;
+	max-width: 34rem;
+	position: fixed; /* To avoid scroll to target */
+	-webkit-transition: top  0.4s ease;
+	transition: top 0.4s ease;
+	background-image: linear-gradient(180deg , #F6FDFF, rgb(250, 254, 255));
+	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}
+
+.modalNewsletter a.bgclose {
+	cursor: default;
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.modalNewsletter:target {
+	opacity: 1;
+	top: 0;
+}
+.modalNewsletter:target .modalContainer{
+	top: 25vh;
+	-webkit-transition: top  0.6s ease;
+	transition: top 0.6s ease;
+}
+
+/*Close*/
+.close {
+	position: absolute;
+	top: 0.3rem;
+	right: 0.3rem;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+}
+
+.close:hover::before, .close:hover::after {
+	background: #1CA8D3;
+}
+
+.close:hover::before {
+	webkit-transform: rotate(135deg);
+	transform: rotate(135deg);
+}
+
+.close:hover::after {
+	webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.close::before, .close::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 0;
+	background: rgba(52, 73, 94, 1);
+	border-radius: 100%;
+	height: 12px;
+	margin-top: -6px;
+	webkit-transition: -webkit-transform .4s ease-in-out;
+	transition: transform .4s ease-in-out;
+}
+.close::before {
+	webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.close::after {
+	webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
 /*Animations*/
 @keyframes type {
-    0% {
-        width: 0;
-    }
-    20% {
-        width: 10rem;
-    }
-    80% {
-        width: 10rem;
-    }
-    100% {
-        width: 10rem;
-    }
+	0% {
+		width: 0;
+	}
+	20% {
+		width: 10rem;
+	}
+	80% {
+		width: 10rem;
+	}
+	100% {
+		width: 10rem;
+	}
 }
 
 @keyframes blink {
-    50% {
-        border-color: transparent;
-    }
+	50% {
+		border-color: transparent;
+	}
 }
