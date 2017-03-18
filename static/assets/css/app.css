@@ -174,6 +174,7 @@ header .newsletter .newsletterform h2 {
 	letter-spacing: .01rem;
 }
 
+/*Email Input*/
 header .newsletter .newsletterform .newsletterfields input[type="email"].email {
 	text-align: center;
 	color: rgba(52, 73, 94, .8);
@@ -187,7 +188,7 @@ header .newsletter .newsletterform .newsletterfields input[type="email"].email {
 	border-right: none;
 	border-bottom: .2rem #3DC2E7 solid;
 	width: 80%;
-	height: 3.6rem;
+	height: 4rem;
 	padding-top: .8rem;
 	webkit-transition: all .4s ease;
 	transition: all .4s ease;
@@ -195,10 +196,10 @@ header .newsletter .newsletterform .newsletterfields input[type="email"].email {
 
 header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus {
 	outline: none;
-	box-shadow: 0 3px 0 rgba(50, 50, 93, .08);
-	/*TODO: Max same color as button shadow*/
+	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
 }
 
+/*Email Label*/
 header .newsletter .newsletterform .newsletterfields label.emaillabel{
 	position:absolute;
 	top: 1.6rem;
@@ -210,6 +211,10 @@ header .newsletter .newsletterform .newsletterfields label.emaillabel{
 	color: rgba(74, 74, 74, .8);
 	transition: all 0.5s ease;
 	pointer-events: none;
+	animation: type 8s steps(36) infinite, blink .5s infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #e1ecf4;
 }
 
 header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
@@ -217,6 +222,8 @@ header .newsletter .newsletterform .newsletterfields input[type="email"].email:f
 	top: 0;
 	font-size: .8rem;
 	line-height: .8rem;
+	animation: none;
+	border: none;
 }
 
 header .newsletter .newsletterform .newsletterfields button[type="submit"].button {
@@ -350,7 +357,7 @@ main section.project span.goal {
 
 	header .newsletter .newsletterform .newsletterfields label.emaillabel {
 		top: 2.6rem;
-		left: 32vw;
+		/*left: 32vw;*/
 	}
 
 	header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
@@ -389,5 +396,26 @@ main section.project span.goal {
 	header .hero{
 		width: 50%;
 	}
+}
 
+/*Animations*/
+@keyframes type {
+    0% {
+        width: 0;
+    }
+    20% {
+        width: 10rem;
+    }
+    80% {
+        width: 10rem;
+    }
+    100% {
+        width: 10rem;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
