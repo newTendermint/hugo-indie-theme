@@ -345,6 +345,94 @@ main section.project span.goal {
 	font-size: 1.4rem;
 }
 
+/*Newsletter Modal*/
+aside.modalNewsletter {
+	position: fixed;
+	left: 0;
+	background: rgba(0,0,0, 0.85);
+	width: 100vw;
+	height: 100vh;
+	opacity: 0;
+	-webkit-transition: opacity  0.4s ease;
+	transition: opacity 0.4s ease;
+}
+
+aside.modalNewsletter .modalContainer {
+	position: fixed; /* To avoid scroll to target */
+	-webkit-transition: top  0.4s ease;
+	transition: top 0.4s ease;
+	background-image: linear-gradient(180deg , #F6FDFF, rgb(250, 254, 255));
+	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}
+
+aside.modalNewsletter a.bgclose {
+	cursor: default;
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+aside.modalNewsletter:target {
+	opacity: 1;
+	top: 0;
+}
+aside.modalNewsletter:target .modalContainer{
+	top: 25vh;
+	-webkit-transition: top  0.6s ease;
+	transition: top 0.6s ease;
+}
+
+/*Close*/
+aside.modalNewsletter .modalContainer .close {
+	position: absolute;
+	top: 0.3rem;
+	right: 0.3rem;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+}
+
+aside.modalNewsletter .close:hover::before,
+aside.modalNewsletter .close:hover::after {
+	background: #1CA8D3;
+}
+
+aside.modalNewsletter .close:hover::before {
+	webkit-transform: rotate(135deg);
+	transform: rotate(135deg);
+}
+
+aside.modalNewsletter .close:hover::after {
+	webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+aside.modalNewsletter .close::before, .close::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 0;
+	background: rgba(52, 73, 94, 1);
+	border-radius: 100%;
+	height: 12px;
+	margin-top: -6px;
+	webkit-transition: -webkit-transform .4s ease-in-out;
+	transition: transform .4s ease-in-out;
+}
+aside.modalNewsletter .close::before {
+	webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+aside.modalNewsletter .close::after {
+	webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+/*Responsiveness*/
 /*sm*/
 @media only screen and (min-width: 48em) {
 
@@ -424,95 +512,10 @@ main section.project span.goal {
 	header .newsletter .newsletterform .newsletterfields label.emaillabel {
 		left: 6.3rem;
 	}
-}
 
-/*Newsletter Modal*/
-aside.modalNewsletter {
-	position: fixed;
-	left: 0;
-	background: rgba(0,0,0, 0.85);
-	width: 100vw;
-	height: 100vh;
-	opacity: 0;
-	-webkit-transition: opacity  0.4s ease;
-	transition: opacity 0.4s ease;
-}
-
-aside.modalNewsletter .modalContainer {
-	width: 100%;
-	max-width: 34rem;
-	position: fixed; /* To avoid scroll to target */
-	-webkit-transition: top  0.4s ease;
-	transition: top 0.4s ease;
-	background-image: linear-gradient(180deg , #F6FDFF, rgb(250, 254, 255));
-	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
-}
-
-aside.modalNewsletter a.bgclose {
-	cursor: default;
-	content: "";
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-}
-
-aside.modalNewsletter:target {
-	opacity: 1;
-	top: 0;
-}
-aside.modalNewsletter:target .modalContainer{
-	top: 25vh;
-	-webkit-transition: top  0.6s ease;
-	transition: top 0.6s ease;
-}
-
-/*Close*/
-aside.modalNewsletter .modalContainer .close {
-	position: absolute;
-	top: 0.3rem;
-	right: 0.3rem;
-	width: 50px;
-	height: 50px;
-	overflow: hidden;
-}
-
-aside.modalNewsletter .close:hover::before,
-aside.modalNewsletter .close:hover::after {
-	background: #1CA8D3;
-}
-
-aside.modalNewsletter .close:hover::before {
-	webkit-transform: rotate(135deg);
-	transform: rotate(135deg);
-}
-
-aside.modalNewsletter .close:hover::after {
-	webkit-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-
-aside.modalNewsletter .close::before, .close::after {
-	content: '';
-	position: absolute;
-	width: 100%;
-	top: 50%;
-	left: 0;
-	background: rgba(52, 73, 94, 1);
-	border-radius: 100%;
-	height: 12px;
-	margin-top: -6px;
-	webkit-transition: -webkit-transform .4s ease-in-out;
-	transition: transform .4s ease-in-out;
-}
-aside.modalNewsletter .close::before {
-	webkit-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-aside.modalNewsletter .close::after {
-	webkit-transform: rotate(-45deg);
-	transform: rotate(-45deg);
+	aside.modalNewsletter .modalContainer {
+		max-width: 34rem;
+	}
 }
 
 /*Animations*/
