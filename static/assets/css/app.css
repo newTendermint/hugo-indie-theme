@@ -105,7 +105,6 @@ header nav ul li.subscribebtn a {
 	text-transform: uppercase;
 	letter-spacing: .1rem;
 	color: #fff;
-	webkit-transition: all .2s ease;
 	transition: all .2s ease;
 }
 
@@ -140,7 +139,6 @@ header nav ul li:not(.subscribebtn) a:before {
 
 header nav ul li a:hover:before {
 	visibility: visible;
-	webkit-transform: scaleX(1);
 	transform: scaleX(1);
 }
 
@@ -190,7 +188,6 @@ header .newsletter .newsletterform .newsletterfields input[type="email"].email {
 	width: 80%;
 	height: 4rem;
 	padding-top: .8rem;
-	webkit-transition: all .4s ease;
 	transition: all .4s ease;
 }
 
@@ -201,7 +198,7 @@ header .newsletter .newsletterform .newsletterfields input[type="email"].email:f
 
 /*Email Label*/
 header .newsletter .newsletterform .newsletterfields label.emaillabel{
-	position:absolute;
+	position: absolute;
 	top: 1.6rem;
 	font-weight: 300;
 	letter-spacing: .02rem;
@@ -210,9 +207,9 @@ header .newsletter .newsletterform .newsletterfields label.emaillabel{
 	text-align: center;
 	color: rgba(74, 74, 74, .8);
 	transition: all 0.5s ease;
-	pointer-events: none;
 	animation: type 8s steps(36) infinite, blink .5s infinite;
     overflow: hidden;
+    -webkit-overflow-scrolling:touch;
     white-space: nowrap;
     border-right: 2px solid #e1ecf4;
 }
@@ -239,7 +236,6 @@ header .newsletter .newsletterform .newsletterfields button[type="submit"].butto
 	width: 4rem;
 	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
 	background-image: linear-gradient(to right, #1CA8D3, #00BCD4);
-	webkit-transition: all .2s ease;
 	transition: all .2s ease;
 }
 
@@ -255,7 +251,6 @@ main section.project {
 	border-radius: 8px;
 	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
 	cursor: pointer;
-	webkit-transition: all .2s ease;
 	transition: all .2s ease;
 }
 
