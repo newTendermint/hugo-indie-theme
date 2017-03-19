@@ -20,24 +20,24 @@ div.content {
 }
 
 /*Main*/
-header div.content canvas#blurCanvas {
+header canvas#blurCanvas {
 	height: 0;
 }
 
 /*Header*/
-header div.content canvas#particles {
-	width: 100%;
-	height: 100%;
+header canvas#particles {
+	width: 100vw;
+	height: 100vh;
 	left:0%;
 	top:0%;
 	position:absolute;
-	z-index: -1;
+	z-index: 0;
 	visibility: hidden;
 }
 
 /*Header*/
-header div.content {
-	background-image: linear-gradient(180deg , #F6FDFF, rgb(250, 254, 255))
+div.content header {
+	background-image: linear-gradient(180deg , #F6FDFF, rgb(255, 255, 255))
 }
 
 header .hero h1 {
@@ -209,6 +209,7 @@ header .newslettermodal .newsletterform .newsletterfields input[type="email"].em
 	padding-top: .8rem;
 	padding-left: 11rem;
 	transition: all .4s ease;
+	z-index: 2;
 }
 
 header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus,
@@ -236,7 +237,7 @@ header .newslettermodal .newsletterform .newsletterfields label.emaillabel {
 	-webkit-overflow-scrolling:touch;
 	white-space: nowrap;
 	border-right: 2px solid #e1ecf4;
-	z-index: -2;
+	z-index: 1;
 }
 
 header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel,
@@ -280,6 +281,7 @@ main section.project {
 	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
 	cursor: pointer;
 	transition: all .2s ease;
+	z-index: 2;
 }
 
 main section.project:hover {
@@ -355,6 +357,7 @@ aside.modalNewsletter {
 	opacity: 0;
 	-webkit-transition: opacity  0.4s ease;
 	transition: opacity 0.4s ease;
+	z-index: 3;
 }
 
 aside.modalNewsletter .modalContainer {
@@ -364,6 +367,7 @@ aside.modalNewsletter .modalContainer {
 	transition: top 0.4s ease;
 	background-image: linear-gradient(180deg , #F6FDFF, rgb(250, 254, 255));
 	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+	z-index: 3;
 }
 
 aside.modalNewsletter a.bgclose {
@@ -374,14 +378,14 @@ aside.modalNewsletter a.bgclose {
 	right: 0;
 	bottom: 0;
 	left: 0;
+	z-index: 3;
 }
 
 aside.modalNewsletter:target {
 	opacity: 1;
 	top: 0;
 }
-aside.modalNewsletter:target .modalContainer{
-	top: 25vh;
+aside.modalNewsletter:target .modalContainer {
 	-webkit-transition: top  0.6s ease;
 	transition: top 0.6s ease;
 }
@@ -449,7 +453,7 @@ aside.modalNewsletter .close::after {
 		padding: 0;
 	}
 
-	header div.content canvas#particles {
+	div.content header canvas#particles {
 		visibility: visible;
 	}
 
@@ -506,11 +510,11 @@ aside.modalNewsletter .close::after {
 	}
 
 	/*Layout*/
-	header div.content .container {
+	header .container {
 		max-width: 70rem;
 	}
 
-	main div.content .container {
+	main .container {
 		max-width: 60rem;
 	}
 

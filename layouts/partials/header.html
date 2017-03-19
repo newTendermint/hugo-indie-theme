@@ -1,5 +1,5 @@
-<header>
-	<div class="content">
+<div class="content">
+	<header>
 		<!-- Particles Canvas -->
 		<canvas id="particles"></canvas>
 		<canvas id="blurCanvas"></canvas>
@@ -56,8 +56,8 @@
 				</div>
 			</section>
 			<section class="row middle-xs center-xs hero">
-				<h1 class="col-xs-8">{{ .Title }}</h1>
-				<p class="col-xs-8">{{ .Description }}</p>
+				<h1 class="col-xs-8 col-md-8">{{ .Title }}</h1>
+				<p class="col-xs-8 col-md-6">{{ .Description }}</p>
 			</section>
 			{{ if .Site.Params.newsletter }}
 			{{ with .Site.Params.mailchimp }}
@@ -65,7 +65,7 @@
 			<section class="row middle-xs center-xs newsletter">
 				<div class="col-xs-10 col-sm-8 newsletterform">
 					<form action="{{ . }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-						<h2 class="col-xs-12">{{ $.Site.Params.newsletterCTA }}</h2>
+						<h2 class="col-xs-12 col-sm-offset-2 col-sm-8">{{ $.Site.Params.newsletterCTA }}</h2>
 						<div class="row bottom-xs center-xs newsletterfields">
 							<input type="email" name="EMAIL" class="col-xs-12 col-sm-8 email" id="mce-EMAIL" required>
 							<label class="col-xs-12 col-sm-8 emaillabel">Enter your email</label>
@@ -86,7 +86,7 @@
 			{{ if .Site.Params.newsletter }}
 			{{ with .Site.Params.mailchimp }}
 			<aside id="modalNewsletter" class="row center-xs middle-xs modalNewsletter">
-			<a href="#!" class="bgclose"></a>
+				<a href="#!" class="bgclose"></a>
 				<div class="col-xs-12 modalContainer">
 					<header>
 						<a href="#!"><span class="close"></span></a>
@@ -114,5 +114,4 @@
 			{{ end }}
 			{{ end }}
 		</div>
-	</div>
-</header>
+	</header>
