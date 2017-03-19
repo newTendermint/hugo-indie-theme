@@ -253,7 +253,7 @@ header nav label.menu-open-button:hover {
 }
 
 header nav input.menu-open:checked ~ ul {
-	height: 27rem;
+	height: 29rem;
 	visibility: visible;
 	opacity: 1;
 }
