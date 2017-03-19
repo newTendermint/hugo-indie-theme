@@ -69,8 +69,7 @@ header nav ul {
 }
 
 header nav ul li {
-	margin: 1rem auto;
-	padding: 1rem 0;
+	padding: 2.5rem 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -78,12 +77,30 @@ header nav ul li {
 	z-index: 1;
 }
 
+header nav ul li.projects {
+	margin-top: 2rem;
+	background-color: rgba(28, 168, 211, 1);
+}
+
+header nav ul li.blog {
+	margin-top: 2rem;
+	background-color: rgba(28, 168, 211, .9);
+}
+
+header nav ul li.philosophy {
+	background-color: rgba(28, 168, 211, .8);
+}
+
+header nav ul li.faq {
+	background-color: rgba(28, 168, 211, .7);
+}
+
 header nav ul li a {
 	letter-spacing: .1rem;
 }
 
 header nav ul li:not(.subscribebtn) a {
-	color: #1CA8D3;
+	color: rgba(255, 255, 255, 1);/*#1CA8D3;*/
 	transition: all .5s ease;
 	text-transform: uppercase;
 	position: relative;
@@ -97,7 +114,7 @@ header nav ul li:not(.subscribebtn) a:before {
 	height: .2rem;
 	bottom: -.4rem;
 	left: 0;
-	background-color: #1CA8D3;
+	background-color: rgb(255,255,255);
 	visibility: hidden;
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
@@ -154,10 +171,10 @@ header nav ul li.subscribebtn a:active {
 header nav label.menu-open-button {
    background: #1CA8D3;
    border-radius: 100%;
-   width: 5rem;
-   height: 5rem;
+   width: 4rem;
+   height: 4rem;
    /*Half of width*/
-   margin-left: -2.5rem;
+   margin-left: -2rem;
    margin-top: 2.4rem;
    position: absolute;
    color: #FFFFFF;
@@ -235,17 +252,8 @@ header nav label.menu-open-button:hover {
    transform: scale(1.2, 1.2) translate3d(0, 0, 0);
 }
 
-header nav input.menu-open:checked + .menu-open-button {
-   -webkit-transition-timing-function: linear;
-   transition-timing-function: linear;
-   -webkit-transition-duration: .2s;
-   transition-duration: .2s;
-   -webkit-transform: scale(0.8, 0.8) translate3d(0, 0, 0);
-   transform: scale(0.8, 0.8) translate3d(0, 0, 0);
-}
-
 header nav input.menu-open:checked ~ ul {
-	height: 88vh;
+	height: 27rem;
 	visibility: visible;
 	opacity: 1;
 }
@@ -562,8 +570,25 @@ aside.modalNewsletter .close::after {
 	}
 
 	header nav ul li {
+		margin: 1rem auto;
 		display: flex;
 		padding: 0;
+	}
+
+	header nav ul li.projects,
+	header nav ul li.blog,
+	header nav ul li.philosophy,
+	header nav ul li.faq {
+		background-color: rgba(0,0,0,0);
+		margin-top: 0;
+	}
+
+	header nav ul li:not(.subscribebtn) a {
+		color: #1CA8D3;
+	}
+
+	header nav ul li:not(.subscribebtn) a:before {
+		background-color: #1CA8D3;
 	}
 
 	div.content header canvas#particles {
