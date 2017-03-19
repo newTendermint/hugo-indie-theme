@@ -372,6 +372,7 @@ aside.modalNewsletter:target {
 	top: 0;
 }
 aside.modalNewsletter:target .modalContainer {
+	top: 25vh;
 	-webkit-transition: top  0.6s ease;
 	transition: top 0.6s ease;
 }
