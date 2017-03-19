@@ -80,22 +80,6 @@ header nav ul li:not(.subscribebtn) a {
 	position: relative;
 }
 
-/*Highlight current sites*/
-.home header nav ul li.projects a:after,
-.blog header nav ul li.blog a:after,
-.philosophy header nav ul li.philosophy a:after,
-.faq header nav ul li.faq a:after{
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: .25rem;
-	top: -.5rem;
-	left: 0;
-	background-color: #1CA8D3;
-	-webkit-transition: all 0.3s ease-in-out 0s;
-	transition: all 0.3s ease-in-out 0s;
-}
-
 /*Navigation Link Hover Effect*/
 header nav ul li:not(.subscribebtn) a:before {
 	content: "";
@@ -457,6 +441,22 @@ aside.modalNewsletter .close::after {
 
 	div.content header canvas#particles {
 		visibility: visible;
+	}
+
+	/*Highlight current sites*/
+	.home header nav ul li.projects a:after,
+	.blog header nav ul li.blog a:after,
+	.philosophy header nav ul li.philosophy a:after,
+	.faq header nav ul li.faq a:after{
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: .24rem;
+		top: -.5rem;
+		left: 0;
+		background-color: #1CA8D3;
+		-webkit-transition: all 0.3s ease-in-out 0s;
+		transition: all 0.3s ease-in-out 0s;
 	}
 
 	/*Hero*/
