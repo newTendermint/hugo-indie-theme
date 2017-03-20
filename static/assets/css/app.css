@@ -458,7 +458,7 @@ main section.project span.goal {
 aside.modalNewsletter {
 	position: fixed;
 	left: 0;
-	background: rgba(0,0,0, 0.85);
+	background: rgba(255,255,255, 0.9);
 	width: 100vw;
 	height: 100vh;
 	opacity: 0;
@@ -580,7 +580,7 @@ aside.modalNewsletter .close::after {
 	header nav ul li.philosophy,
 	header nav ul li.faq {
 		background-color: rgba(0,0,0,0);
-		margin-top: 0;
+		margin-top: 1rem;
 	}
 
 	header nav ul li:not(.subscribebtn) a {
