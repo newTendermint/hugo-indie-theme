@@ -39,7 +39,7 @@ header canvas#particles {
 	visibility: hidden;
 }
 
-header div.logo a{
+header div.logo a {
 	z-index: 1;
 }
 
@@ -132,7 +132,7 @@ header nav ul li.subscribebtn {
 	margin: .5rem 0;
 }
 
-header nav ul li.subscribebtn a svg{
+header nav ul li.subscribebtn a svg {
 	margin-right: .4rem;
 }
 
