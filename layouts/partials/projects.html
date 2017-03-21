@@ -31,7 +31,7 @@
 									<div class="col-xs-6 row">
 										<span class="col-xs-12 label">Goal</span>
 										{{ if .Params.goal }}
-										<span class="col-xs-12 goal">${{ .Params.goal }}</span>
+										<span class="col-xs-12 goal tooltip" data-tip="Our goal is to make ${{ .Params.goal }} with this project" tabindex="1">${{ .Params.goal }}</span>
 										{{ end }}
 									</div>
 								</div>
