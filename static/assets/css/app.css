@@ -264,12 +264,12 @@ header nav input.menu-open:checked ~ ul li {
 
 /*Logo Type*/
 header a .logotype {
-	text-transform: uppercase;
+	/*text-transform: uppercase;
 	color: #1CA8D3;
 	align-items: center;
 	font-weight: 700;
 	font-size: 1.8rem;
-	letter-spacing: .1rem;
+	letter-spacing: .1rem;*/
 	margin-top: 1.6rem;
 }
 
