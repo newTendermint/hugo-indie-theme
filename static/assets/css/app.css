@@ -39,6 +39,10 @@ header canvas#particles {
 	visibility: hidden;
 }
 
+header div.logo {
+	margin-top: 1.6rem;
+}
+
 header div.logo a {
 	z-index: 1;
 }
@@ -56,7 +60,6 @@ header .hero p {
 }
 
 /*Nav*/
-
 header nav ul {
 	list-style-type: none;
 	padding: 0;
@@ -100,7 +103,7 @@ header nav ul li a {
 }
 
 header nav ul li:not(.subscribebtn) a {
-	color: rgba(255, 255, 255, 1);/*#1CA8D3;*/
+	color: rgba(255, 255, 255, 1);
 	transition: all .5s ease;
 	text-transform: uppercase;
 	position: relative;
@@ -269,8 +272,8 @@ header a .logotype {
 	align-items: center;
 	font-weight: 700;
 	font-size: 1.8rem;
-	letter-spacing: .1rem;*/
-	margin-top: 1.6rem;
+	letter-spacing: .1rem;
+	margin-top: 1.6rem;*/
 }
 
 /*Hero*/
@@ -279,17 +282,20 @@ header .hero {
 }
 
 /*Newsletter*/
-header .newsletter {
+header .newsletter,
+footer .newsletter {
 	margin-bottom: 4rem;
 }
 
 header .newsletter .newsletterform .newsletterfields,
-header .newslettermodal .newsletterform .newsletterfields {
+header .newslettermodal .newsletterform .newsletterfields,
+footer .newsletter .newsletterform .newsletterfields {
 	position: relative;
 }
 
 header .newsletter .newsletterform h2,
-header .newslettermodal .newsletterform h2 {
+header .newslettermodal .newsletterform h2,
+footer .newsletter .newsletterform h2 {
 	color: #3DC2E7;
 	letter-spacing: .01rem;
 }
@@ -301,7 +307,8 @@ header .newslettermodal .newsletterform {
 
 /*Email Input*/
 header .newsletter .newsletterform .newsletterfields input[type="email"].email,
-header .newslettermodal .newsletterform .newsletterfields input[type="email"].email {
+header .newslettermodal .newsletterform .newsletterfields input[type="email"].email,
+footer .newsletter .newsletterform .newsletterfields input[type="email"].email {
 	color: rgba(52, 73, 94, .8);
 	font-weight: 600;
 	letter-spacing: .02rem;
@@ -320,7 +327,8 @@ header .newslettermodal .newsletterform .newsletterfields input[type="email"].em
 }
 
 header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus,
-header .newslettermodal .newsletterform .newsletterfields input[type="email"].email:focus {
+header .newslettermodal .newsletterform .newsletterfields input[type="email"].email:focus,
+footer .newsletter .newsletterform .newsletterfields input[type="email"].email:focus {
 	outline: none;
 	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
 	padding-left: 1rem;
@@ -328,7 +336,8 @@ header .newslettermodal .newsletterform .newsletterfields input[type="email"].em
 
 /*Email Label*/
 header .newsletter .newsletterform .newsletterfields label.emaillabel,
-header .newslettermodal .newsletterform .newsletterfields label.emaillabel {
+header .newslettermodal .newsletterform .newsletterfields label.emaillabel,
+footer .newsletter .newsletterform .newsletterfields label.emaillabel {
 	position: absolute;
 	top: 1.6rem;
 	left: .4rem;
@@ -348,7 +357,8 @@ header .newslettermodal .newsletterform .newsletterfields label.emaillabel {
 }
 
 header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel,
-header .newslettermodal .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
+header .newslettermodal .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel,
+footer .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
 	color: rgba(74, 74, 74, .4);
 	top: .4rem;
 	font-size: .8rem;
@@ -358,7 +368,8 @@ header .newslettermodal .newsletterform .newsletterfields input[type="email"].em
 }
 
 header .newsletter .newsletterform .newsletterfields button[type="submit"].button,
-header .newslettermodal .newsletterform .newsletterfields button[type="submit"].button {
+header .newslettermodal .newsletterform .newsletterfields button[type="submit"].button,
+footer .newsletter .newsletterform .newsletterfields button[type="submit"].button {
 	margin-top: 1rem;
 	border: none;
 	cursor: pointer;
@@ -375,9 +386,22 @@ header .newslettermodal .newsletterform .newsletterfields button[type="submit"].
 }
 
 header .newsletter .newsletterform .newsletterfields button[type="submit"].button:hover,
-header .newslettermodal .newsletterform .newsletterfields button[type="submit"].button:hover {
-	background-image: linear-gradient(to right, #00BCD4, #1CA8D3);
-	box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
+header .newslettermodal .newsletterform .newsletterfields button[type="submit"].button:hover,
+footer .newsletter .newsletterform .newsletterfields button[type="submit"].button:hover {
+	/*background-image: linear-gradient(to right, #00BCD4, #1CA8D3);*/
+	/*box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);*/
+}
+
+header .newsletter .newsletterform .newsletterfields button[type="submit"].button svg,
+header .newslettermodal .newsletterform .newsletterfields button[type="submit"].button svg,
+footer .newsletter .newsletterform .newsletterfields button[type="submit"].button svg {
+	transition: all .2s ease;
+}
+
+header .newsletter .newsletterform .newsletterfields button[type="submit"].button:hover svg,
+header .newslettermodal .newsletterform .newsletterfields button[type="submit"].button:hover svg,
+footer .newsletter .newsletterform .newsletterfields button[type="submit"].button:hover svg {
+	transform: scale(1.05);
 }
 
 /*Projects*/
@@ -545,6 +569,111 @@ aside.modalNewsletter .close::after {
 	transform: rotate(-45deg);
 }
 
+/*Footer*/
+div.content footer {
+	margin-top: 6rem;
+}
+
+footer div.logo {
+	margin: 6rem 0;
+}
+
+footer .newsletter .newsletterform {
+	margin-bottom: 2rem;
+}
+
+/*Links*/
+footer div.links ul {
+	padding: 0;
+	list-style-type: none;
+	transition: all .4s ease;
+	margin-bottom: 6rem;
+}
+
+footer div.links ul li {
+	padding: 2.5rem 0;
+}
+
+footer div.links ul li.projects {
+	background-color: rgba(28, 168, 211, 1);
+}
+
+footer div.links ul li.blog {
+	background-color: rgba(28, 168, 211, .9);
+}
+
+footer div.links ul li.philosophy {
+	background-color: rgba(28, 168, 211, .8);
+}
+
+footer div.links ul li.faq {
+	background-color: rgba(28, 168, 211, .7);
+}
+
+footer div.links ul li a {
+	letter-spacing: .1rem;
+	color: rgba(255, 255, 255, 1);
+	transition: all .5s ease;
+	text-transform: uppercase;
+}
+
+/*Footer Links Hover Effect*/
+footer div.links ul li a:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: .2rem;
+	bottom: -.4rem;
+	left: 0;
+	background-color: rgb(255,255,255);
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+footer div.links ul li a:hover:before {
+	visibility: visible;
+	transform: scaleX(1);
+}
+
+footer section.bottom div ul {
+	padding: 0;
+}
+
+footer section.bottom div ul.legal li a:hover {
+	color: rgba(130,130,150,.8);
+}
+
+footer section.bottom div ul li:not(.social-icons):not(.copy),
+footer section.bottom div ul li a:not(.social-icons) {
+	font-weight: 300;
+	padding: 0;
+	font-size: 1rem;
+	color: rgba(130,130,150,.4);
+}
+
+footer section.bottom div ul li.copy {
+	font-weight: 300;
+	padding: 0;
+	font-size: 1rem;
+	color: rgba(130,130,150,.4);
+	margin-bottom: 4rem;
+}
+
+footer section.bottom div ul {
+	list-style-type: none;
+}
+
+footer section.bottom div ul.social-icons li a img {
+	transition: all .4s ease;
+}
+
+footer section.bottom div ul.social-icons li a:hover img {
+	filter: blur(1px);
+}
+
 /*Responsiveness*/
 /*sm*/
 @media only screen and (min-width: 48em) {
@@ -622,18 +751,15 @@ aside.modalNewsletter .close::after {
 			margin-left: 2rem;
 		}
 
-		header .newsletter .newsletterform .newsletterfields label.emaillabel {
-			top: 2.7rem;
-			left: 3.2rem;
-		}
-
-		header .newslettermodal .newsletterform .newsletterfields label.emaillabel {
+		header .newslettermodal .newsletterform .newsletterfields label.emaillabel,
+		footer .newsletter .newsletterform .newsletterfields label.emaillabel {
 			top: 2.7rem;
 			left: 2.7rem;
 		}
 
 		header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel,
-		header .newslettermodal .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
+		header .newslettermodal .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel,
+		footer .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
 			top: 1.2rem;
 			font-size: 1rem;
 			line-height: 1.2rem;
@@ -644,7 +770,7 @@ aside.modalNewsletter .close::after {
 		}
 
 		/*Tooltips*/
-		main section.project span.tooltip {
+/*		main section.project span.tooltip {
 			cursor: help;
 			position: relative;
 			float: left;
@@ -673,7 +799,7 @@ aside.modalNewsletter .close::after {
 			transition-delay: .5s;
 		}
 
-		/*Tooltip triangle*/
+		/* Tooltip triangle
 		main section.project span.tooltip::before {
 			width: 0;
 			height: 0;
@@ -689,7 +815,7 @@ aside.modalNewsletter .close::after {
 				26), opacity .65s .1s;
 		}
 
-		/* styling the speech bubble */
+		/* styling the speech bubble
 		main section.project span.tooltip::after {
 			background: #1CA8D3;
 			border-radius: .25em;
@@ -707,7 +833,11 @@ aside.modalNewsletter .close::after {
 
 		main section.project span.tooltip:hover::after,
 		main section.project span.tooltip:focus::after {
-			transition-delay: .025s;
+			transition-delay: 0.2s;
+		}*/
+
+		footer section.bottom div ul li.copy {
+			margin-bottom: 0;
 		}
 	}
 
@@ -719,7 +849,8 @@ aside.modalNewsletter .close::after {
 			height: 2.4rem;
 		}
 
-		header .newsletter .newsletterform .newsletterfields label.emaillabel {
+		header .newsletter .newsletterform .newsletterfields label.emaillabel,
+		footer .newsletter .newsletterform .newsletterfields label.emaillabel {
 			left: 6rem;
 		}
 	}
@@ -742,6 +873,10 @@ aside.modalNewsletter .close::after {
 
 		header .newsletter .newsletterform .newsletterfields label.emaillabel {
 			left: 6.3rem;
+		}
+
+		footer .newsletter .newsletterform .newsletterfields label.emaillabel {
+			left: 6.8rem;
 		}
 
 		aside.modalNewsletter .modalContainer {
