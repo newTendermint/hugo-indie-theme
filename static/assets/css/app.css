@@ -488,12 +488,12 @@ aside.modalNewsletter {
 	opacity: 0;
 	-webkit-transition: opacity  0.4s ease;
 	transition: opacity 0.4s ease;
-	z-index: 3;
+	z-index: -1;
 }
 
 aside.modalNewsletter .modalContainer {
 	left: 0;
-	position: fixed; /* To avoid scroll to target */
+	position: fixed;
 	-webkit-transition: top  0.4s ease;
 	transition: top 0.4s ease;
 	background-image: linear-gradient(180deg , #F6FDFF, rgb(250, 254, 255));
@@ -516,13 +516,16 @@ aside.modalNewsletter:target {
 	opacity: 1;
 	top: 0;
 }
+
+aside.modalNewsletter:target {
+	z-index: 3;
+}
 aside.modalNewsletter:target .modalContainer {
 	top: 25vh;
 	-webkit-transition: top  0.6s ease;
 	transition: top 0.6s ease;
 }
 
-/*Close*/
 aside.modalNewsletter .modalContainer .close {
 	position: absolute;
 	top: 0.3rem;
