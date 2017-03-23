@@ -293,6 +293,10 @@ footer .newsletter .newsletterform .newsletterfields {
 	position: relative;
 }
 
+footer .newsletter .newsletterform {
+	margin-bottom: 6rem;
+}
+
 header .newsletter .newsletterform h2,
 header .newslettermodal .newsletterform h2,
 footer .newsletter .newsletterform h2 {
@@ -578,11 +582,7 @@ div.content footer {
 }
 
 footer div.logo {
-	margin: 6rem 0;
-}
-
-footer .newsletter .newsletterform {
-	margin-bottom: 2rem;
+	margin: 8rem 0;
 }
 
 /*Links*/
@@ -590,7 +590,7 @@ footer div.links ul {
 	padding: 0;
 	list-style-type: none;
 	transition: all .4s ease;
-	margin-bottom: 6rem;
+	margin-bottom: 0;
 }
 
 footer div.links ul li {
@@ -643,6 +643,7 @@ footer div.links ul li a:hover:before {
 
 footer section.bottom div ul {
 	padding: 0;
+	margin-bottom: 0;
 }
 
 footer section.bottom div ul.legal li a:hover {
@@ -665,8 +666,9 @@ footer section.bottom div ul li.copy {
 	font-weight: 300;
 	padding: 0;
 	font-size: 1rem;
-	color: rgba(130,130,150,.4);
-	margin-bottom: 4rem;
+	color: rgba(130,130,150,.2);
+	margin-bottom: 3rem;
+	margin-top: 4.2rem;
 }
 
 footer section.bottom div ul {
@@ -674,7 +676,7 @@ footer section.bottom div ul {
 }
 
 footer section.bottom div ul.social-icons li a img {
-	transition: all .4s ease;
+	transition: all .2s ease;
 }
 
 footer section.bottom div ul.social-icons li a:hover img {
@@ -750,7 +752,7 @@ footer section.bottom div ul.social-icons li a:hover img {
 
 		/*Hero*/
 		header .hero {
-			margin: 2rem auto;
+			margin: 4rem auto;
 		}
 
 		header nav ul li.subscribebtn a {
@@ -843,7 +845,19 @@ footer section.bottom div ul.social-icons li a:hover img {
 			transition-delay: 0.2s;
 		}*/
 
+		footer section.newsletter {
+			margin-bottom: 10rem;
+		}
+
+		footer section.bottom {
+			margin-bottom: 1rem;
+		}
+
 		footer section.bottom div ul li.copy {
+			margin: auto 0;
+		}
+
+		footer .newsletter .newsletterform {
 			margin-bottom: 0;
 		}
 	}
@@ -856,9 +870,12 @@ footer section.bottom div ul.social-icons li a:hover img {
 			height: 2.4rem;
 		}
 
-		header .newsletter .newsletterform .newsletterfields label.emaillabel,
-		footer .newsletter .newsletterform .newsletterfields label.emaillabel {
+		header .newsletter .newsletterform .newsletterfields label.emaillabel {
 			left: 6rem;
+		}
+
+		footer .newsletter .newsletterform .newsletterfields label.emaillabel {
+			left: 2.7rem;
 		}
 	}
 
@@ -880,10 +897,6 @@ footer section.bottom div ul.social-icons li a:hover img {
 
 		header .newsletter .newsletterform .newsletterfields label.emaillabel {
 			left: 6.3rem;
-		}
-
-		footer .newsletter .newsletterform .newsletterfields label.emaillabel {
-			left: 6.8rem;
 		}
 
 		aside.modalNewsletter .modalContainer {

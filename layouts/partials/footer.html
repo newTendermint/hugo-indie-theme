@@ -1,28 +1,5 @@
 <footer>
 	<div class="container container-fluid"> <!-- Container -->
-		{{ if .Site.Params.newsletter }}
-		{{ with .Site.Params.mailchimp }}
-		<!-- Newsletter -->
-		<section class="row middle-xs center-xs newsletter">
-			<div class="col-xs-8 newsletterform">
-				<form action="{{ . }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-					<h2 class="col-xs-12 col-sm-offset-2 col-sm-8">{{ $.Site.Params.newsletterCTA }}</h2>
-					<div class="row bottom-xs center-xs newsletterfields">
-						<input type="email" name="EMAIL" class="col-xs-12 col-sm-8 email" id="mce-EMAIL" required>
-						<label class="col-xs-12 col-sm-8 emaillabel">Enter your email</label>
-						<button type="submit" value="submit" name="subscribe" id="mc-embedded-subscribe" class="col-xs-12 col-sm-2 col-md-1 button">
-							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="36px" height="36px" viewBox="0 0 48 48"><g  transform="translate(0, 0)">
-								<path fill="#ffffff" d="M3.4,21l6.3,4.8l12.9-6.6c0.5-0.3,1,0.5,0.5,0.8L13,28.2h0l0,0v14c0,0.9,1.2,1.4,1.8,0.6l6.9-8.2L35.4,45&#10;&#9;c0.6,0.4,1.4,0.1,1.6-0.6l8-40c0.2-0.8-0.6-1.4-1.4-1.1l-40,16C2.9,19.6,2.8,20.6,3.4,21z"/>
-							</g></svg>
-						</button>
-						<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e13eb956f39adfc0167aba5e0_aac458223f" tabindex="-1" value=""></div>
-					</div>
-				</form>
-			</div>
-		</section>
-		{{ end }}
-		{{ end }}
 		<!-- Logo -->
 		<div class="col-xs-12 logo">
 			<div class="row middle-xs">
@@ -52,9 +29,30 @@
 				</div>
 			</div>
 		</div>
-		<!-- Links -->
-		<section class="row middle-xs center-xs">
-			<div class="col-xs-8 links">
+		<section class="row middle-xs center-xs bottom-md newsletter">
+		{{ if .Site.Params.newsletter }}
+		{{ with .Site.Params.mailchimp }}
+		<!-- Newsletter -->
+			<div class="col-xs-10 col-md-5 center-xs newsletterform">
+				<form action="{{ . }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+					<h2 class="col-xs-12 center-xs col-sm-offset-1 col-sm-10">{{ $.Site.Params.newsletterCTA }}</h2>
+					<div class="row bottom-xs center-xs newsletterfields">
+						<input type="email" name="EMAIL" class="col-xs-12 col-sm-8 email" id="mce-EMAIL" required>
+						<label class="col-xs-12 col-sm-8 emaillabel">Enter your email</label>
+						<button type="submit" value="submit" name="subscribe" id="mc-embedded-subscribe" class="col-xs-12 col-sm-2 col-md-2 button">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="36px" height="36px" viewBox="0 0 48 48"><g  transform="translate(0, 0)">
+								<path fill="#ffffff" d="M3.4,21l6.3,4.8l12.9-6.6c0.5-0.3,1,0.5,0.5,0.8L13,28.2h0l0,0v14c0,0.9,1.2,1.4,1.8,0.6l6.9-8.2L35.4,45&#10;&#9;c0.6,0.4,1.4,0.1,1.6-0.6l8-40c0.2-0.8-0.6-1.4-1.4-1.1l-40,16C2.9,19.6,2.8,20.6,3.4,21z"/>
+							</g></svg>
+						</button>
+						<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_e13eb956f39adfc0167aba5e0_aac458223f" tabindex="-1" value=""></div>
+					</div>
+				</form>
+			</div>
+			{{ end }}
+			{{ end }}
+			<!-- Links -->
+			<div class="col-xs-10 col-md-4 col-md-offset-1 links">
 				<section>
 					<ul class="row center-xs">
 						{{ range .Site.Menus.main }}
@@ -69,7 +67,7 @@
 						</li>
 						{{ else }}
 						{{ if ne .Identifier "subscribebtn" }}
-						<li class="col-xs-12 col-sm col-md col-lg {{ .Identifier }}"><a href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>{{ .Pre }}<span>{{ .Name }}</span></a>
+						<li class="col-xs-12 col-sm col-md-6 {{ .Identifier }}"><a href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>{{ .Pre }}<span>{{ .Name }}</span></a>
 						</li>
 						{{ end }}
 						{{ end }}
@@ -81,16 +79,16 @@
 		<!-- Bottom -->
 		<section class="row middle-xs align-xs bottom">
 			<!-- Legal Links -->
-			<div class="col-xs-12 col-sm start-sm">
+			<div class="col-xs-12 col-sm end-sm">
 				<ul class="row middle-xs center-xs legal">
-					{{ with .Site.Copyright }}<li class="col-xs-12 col-sm-4 copy">{{ . | markdownify}}</li>{{ end }}
 					{{ range $.Site.Params.legal }}
 					<li class="col-xs"><a href="{{ .url | relLangURL }}">{{ .name }}</a></li>
 					{{ end }}
+					{{ with .Site.Copyright }}<li class="col-xs-12 col-sm-6 copy">{{ . | markdownify}}</li>{{ end }}
 				</ul>
 			</div>
 			<!-- Social Links -->
-			<div class="col-xs-12 col-sm-offset-3 col-sm-4 end-sm">
+			<div class="col-xs-12 col-sm-4 end-sm">
 				<ul class="row middle-xs center-xs social-icons">
 					{{ range $.Site.Params.social }}
 					<li class="col-xs {{ .name }}"><a href="{{ .url | safeURL }}" target="_blank"><img src="/assets/{{ .icon }}" alt="{{ .name }}"></a></li>
