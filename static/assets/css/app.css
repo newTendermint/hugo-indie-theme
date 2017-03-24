@@ -265,28 +265,12 @@ header nav input.menu-open:checked ~ ul li {
 	display: flex;
 }
 
-/*Logo Type*/
-header a .logotype {
-	/*text-transform: uppercase;
-	color: #1CA8D3;
-	align-items: center;
-	font-weight: 700;
-	font-size: 1.8rem;
-	letter-spacing: .1rem;
-	margin-top: 1.6rem;*/
-}
-
 /*Hero*/
 header .hero {
 	margin: 1rem auto;
 }
 
 /*Newsletter*/
-header .newsletter,
-footer .newsletter {
-	margin-bottom: 4rem;
-}
-
 header .newsletter .newsletterform .newsletterfields,
 header .newslettermodal .newsletterform .newsletterfields,
 footer .newsletter .newsletterform .newsletterfields {
@@ -298,9 +282,13 @@ footer .newsletter .newsletterform {
 }
 
 header .newsletter .newsletterform h2,
-header .newslettermodal .newsletterform h2,
-footer .newsletter .newsletterform h2 {
+header .newslettermodal .newsletterform h2 {
 	color: #3DC2E7;
+	letter-spacing: .01rem;
+}
+
+footer .newsletter .newsletterform h2 {
+	color: rgba(255,255,255,.9);
 	letter-spacing: .01rem;
 }
 
@@ -328,6 +316,10 @@ footer .newsletter .newsletterform .newsletterfields input[type="email"].email {
 	padding-left: 11rem;
 	transition: all .4s ease;
 	z-index: 2;
+}
+
+footer .newsletter .newsletterform .newsletterfields input[type="email"].email {
+	border-bottom: .2rem rgba(255,255,255,.8) solid;
 }
 
 header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus,
@@ -360,6 +352,10 @@ footer .newsletter .newsletterform .newsletterfields label.emaillabel {
 	z-index: 1;
 }
 
+footer .newsletter .newsletterform .newsletterfields label.emaillabel {
+	color: rgba(255, 255, 255, .8);
+}
+
 header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel,
 header .newslettermodal .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel,
 footer .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
@@ -369,6 +365,10 @@ footer .newsletter .newsletterform .newsletterfields input[type="email"].email:f
 	line-height: .8rem;
 	animation: none;
 	border: none;
+}
+
+footer .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
+	color: rgba(255, 255, 255, .4);
 }
 
 header .newsletter .newsletterform .newsletterfields button[type="submit"].button,
@@ -389,11 +389,9 @@ footer .newsletter .newsletterform .newsletterfields button[type="submit"].butto
 	transition: all .2s ease;
 }
 
-header .newsletter .newsletterform .newsletterfields button[type="submit"].button:hover,
-header .newslettermodal .newsletterform .newsletterfields button[type="submit"].button:hover,
-footer .newsletter .newsletterform .newsletterfields button[type="submit"].button:hover {
-	/*background-image: linear-gradient(to right, #00BCD4, #1CA8D3);*/
-	/*box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);*/
+footer .newsletter .newsletterform .newsletterfields button[type="submit"].button {
+	background: rgba(255,255,255,.8);
+	box-shadow: none;
 }
 
 header .newsletter .newsletterform .newsletterfields button[type="submit"].button svg,
@@ -409,13 +407,16 @@ footer .newsletter .newsletterform .newsletterfields button[type="submit"].butto
 }
 
 /*Projects*/
+div.content main {
+	margin-top: 6rem;
+}
 main section.project {
 	margin: 2rem 0;
 	padding: 0 0 1rem 0;
 	border-radius: 8px;
 	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
 	cursor: pointer;
-	transition: all .3s ease;
+	transition: all .5s ease-in-out;
 	z-index: 2;
 }
 
@@ -502,7 +503,7 @@ aside.modalNewsletter .modalContainer {
 	transition: top 0.4s ease;
 	background-image: linear-gradient(180deg , #F6FDFF, rgb(250, 254, 255));
 	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
-	z-index: 3;
+	z-index: -1;
 }
 
 aside.modalNewsletter a.bgclose {
@@ -513,7 +514,7 @@ aside.modalNewsletter a.bgclose {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	z-index: 3;
+	z-index: -1;
 }
 
 aside.modalNewsletter:target {
@@ -522,7 +523,7 @@ aside.modalNewsletter:target {
 }
 
 aside.modalNewsletter:target {
-	z-index: 3;
+	z-index: 5;
 }
 aside.modalNewsletter:target .modalContainer {
 	top: 25vh;
@@ -578,83 +579,29 @@ aside.modalNewsletter .close::after {
 
 /*Footer*/
 div.content footer {
-	margin-top: 6rem;
+	padding-top: 6rem;
+	background-image: linear-gradient(to right, #00BCD4, #1CA8D3);
 }
 
 footer div.logo {
-	margin: 8rem 0;
-}
-
-/*Links*/
-footer div.links ul {
-	padding: 0;
-	list-style-type: none;
-	transition: all .4s ease;
-	margin-bottom: 0;
-}
-
-footer div.links ul li {
-	padding: 2.5rem 0;
-}
-
-footer div.links ul li.projects {
-	background-color: rgba(28, 168, 211, 1);
-}
-
-footer div.links ul li.blog {
-	background-color: rgba(28, 168, 211, .9);
-}
-
-footer div.links ul li.philosophy {
-	background-color: rgba(28, 168, 211, .8);
-}
-
-footer div.links ul li.faq {
-	background-color: rgba(28, 168, 211, .7);
-}
-
-footer div.links ul li a {
-	letter-spacing: .1rem;
-	color: rgba(255, 255, 255, 1);
-	transition: all .5s ease;
-	text-transform: uppercase;
-}
-
-/*Footer Links Hover Effect*/
-footer div.links ul li a:before {
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: .2rem;
-	bottom: -.4rem;
-	left: 0;
-	background-color: rgb(255,255,255);
-	visibility: hidden;
-	-webkit-transform: scaleX(0);
-	transform: scaleX(0);
-	-webkit-transition: all 0.3s ease-in-out 0s;
-	transition: all 0.3s ease-in-out 0s;
-}
-
-footer div.links ul li a:hover:before {
-	visibility: visible;
-	transform: scaleX(1);
+	margin-bottom: 4rem;
 }
 
 footer section.bottom div ul {
 	padding: 0;
-	margin-bottom: 0;
-}
-
-footer section.bottom div ul.legal li a:hover {
-	color: rgba(130,130,150,.8);
+	margin: 0;
+	list-style-type: none;
 }
 
 footer section.bottom div ul li a:not(.social-icons) {
 	font-weight: 300;
 	padding: 0;
 	font-size: 1rem;
-	color: rgba(130,130,150,.4);
+	color: rgba(255,255,255,.6);
+}
+
+footer section.bottom div ul.legal li a:hover {
+	color: rgba(255,255,255,1);
 }
 
 footer section.bottom div ul li a {
@@ -662,17 +609,24 @@ footer section.bottom div ul li a {
 	width: 100%;
 }
 
-footer section.bottom div ul li.copy {
+footer section.bottom div ul.social-icons  {
+	margin-bottom: 3rem;
+}
+
+footer section.bottom div ul.legal  {
+	margin-top: 3rem;
+}
+
+footer section.bottom div ul.legal li a {
+	transition: all ease .4s;
+}
+
+footer section.bottom div ul.copy li {
 	font-weight: 300;
 	padding: 0;
 	font-size: 1rem;
-	color: rgba(130,130,150,.2);
-	margin-bottom: 3rem;
-	margin-top: 4.2rem;
-}
-
-footer section.bottom div ul {
-	list-style-type: none;
+	color: rgba(255,255,255,.2);
+	margin: 2rem 0;
 }
 
 footer section.bottom div ul.social-icons li a img {
@@ -688,6 +642,10 @@ footer section.bottom div ul.social-icons li a:hover img {
 @media only screen and (min-width: 48em) {
 
 	header a .logotype {
+		margin-top: 0;
+	}
+
+	header div.logo {
 		margin-top: 0;
 	}
 
@@ -734,8 +692,7 @@ footer section.bottom div ul.social-icons li a:hover img {
 	}
 
 	/*Highlight current sites*/
-	/*TODO: Decide wether to leave in or not*/
-/*	.home header nav ul li.projects a:after,
+	.home header nav ul li.projects a:after,
 	.blog header nav ul li.blog a:after,
 	.philosophy header nav ul li.philosophy a:after,
 	.faq header nav ul li.faq a:after{
@@ -743,12 +700,12 @@ footer section.bottom div ul.social-icons li a:hover img {
 		position: absolute;
 		width: 100%;
 		height: .24rem;
-		top: -.5rem;
+		bottom: -.4rem;
 		left: 0;
 		background-color: #1CA8D3;
 		-webkit-transition: all 0.3s ease-in-out 0s;
 		transition: all 0.3s ease-in-out 0s;
-		}*/
+		}
 
 		/*Hero*/
 		header .hero {
@@ -760,7 +717,7 @@ footer section.bottom div ul.social-icons li a:hover img {
 			margin-left: 2rem;
 		}
 
-		header .newslettermodal .newsletterform .newsletterfields label.emaillabel,
+		header .newsletter .newsletterform .newsletterfields label.emaillabel,
 		footer .newsletter .newsletterform .newsletterfields label.emaillabel {
 			top: 2.7rem;
 			left: 2.7rem;
@@ -778,83 +735,29 @@ footer section.bottom div ul.social-icons li a:hover img {
 			left: unset;
 		}
 
-		/*Tooltips*/
-/*		main section.project span.tooltip {
-			cursor: help;
-			position: relative;
-			float: left;
-			margin: 5% 1%;
+		footer div.logo {
+			margin-bottom: 0;
 		}
 
-		main section.project span.tooltip::before,
-		main section.project span.tooltip::after {
-			position: absolute;
-			left: 50%;
-			opacity: 0;
-			z-index: -100;
-		}
-
-		main section.project span.tooltip:hover::before,
-		main section.project span.tooltip:focus::before,
-		main section.project span.tooltip:hover::after,
-		main section.project span.tooltip:focus::after {
-			opacity: 1;
-			z-index: 100;
-			transform: scale(1) translateY(0);
-		}
-
-		main section.project span.tooltip:hover::before,
-		main section.project span.tooltip:focus::before {
-			transition-delay: .5s;
-		}
-
-		/* Tooltip triangle
-		main section.project span.tooltip::before {
-			width: 0;
-			height: 0;
-			border-left: 1rem solid transparent;
-			border-right: 1rem solid transparent;
-			border-top: 1rem solid #f00;
-			border-color: #1CA8D3 transparent transparent transparent;
-			bottom: 105%;
-			margin-left: -.8em;
-			content: "";
-			transform: scale(.6) translateY(-90%);
-			transition: all .5s cubic-bezier(.85, -0.18, .31, 1
-				26), opacity .65s .1s;
-		}
-
-		/* styling the speech bubble
-		main section.project span.tooltip::after {
-			background: #1CA8D3;
-			border-radius: .25em;
-			font-size: 1.1rem;
-			line-height: 1.4rem;
-			bottom: 140%;
-			color: #EDEFF0;
-			width: 14rem;
-			padding: 1rem;
-			margin-left: -8rem;
-			content: attr(data-tip);
-			transform: scale(.9) translateY(90%);
-			transition: all .5s cubic-bezier(.84, -.18, .31, 1.26) .2s;
-		}
-
-		main section.project span.tooltip:hover::after,
-		main section.project span.tooltip:focus::after {
-			transition-delay: 0.2s;
-		}*/
-
-		footer section.newsletter {
-			margin-bottom: 10rem;
+		footer div.cta {
+			margin-bottom: 6rem;
 		}
 
 		footer section.bottom {
-			margin-bottom: 1rem;
+			padding-bottom: 1rem;
 		}
 
-		footer section.bottom div ul li.copy {
-			margin: auto 0;
+		footer section.bottom div ul.social-icons {
+			margin-bottom: 0;
+		}
+
+		footer section.bottom div ul.copy li {
+			margin-bottom: 0;
+			margin-top: .4rem;
+		}
+
+		footer section.bottom div ul.legal  {
+			margin-top: 0;
 		}
 
 		footer .newsletter .newsletterform {
