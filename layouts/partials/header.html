@@ -84,6 +84,7 @@
 					</nav>
 				</div>
 			</section>
+			{{ if .IsHome }}
 			<!-- Hero -->
 			<section class="row middle-xs center-xs hero">
 				<h1 class="col-xs-10 col-md-8">{{ .Title }}</h1>
@@ -110,6 +111,7 @@
 					</form>
 				</div>
 			</section>
+			{{ end }}
 			{{ end }}
 			{{ end }}
 			<!-- Newsletter Modal -->

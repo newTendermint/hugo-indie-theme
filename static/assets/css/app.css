@@ -233,6 +233,7 @@ header nav label.menu-open-button span.line-2 {
 header nav label.menu-open-button span.line-3 {
 	-webkit-transform: translate3d(0, 8px, 0);
 	transform: translate3d(0, 8px, 0);
+	width: 18px;
 }
 
 header nav input.menu-open:checked + .menu-open-button .line-1 {
@@ -248,6 +249,7 @@ header nav input.menu-open:checked + .menu-open-button .line-2 {
 header nav input.menu-open:checked + .menu-open-button .line-3 {
 	-webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
 	transform: translate3d(0, 0, 0) rotate(-45deg);
+	width: 25px;
 }
 
 header nav label.menu-open-button:hover {
@@ -407,15 +409,19 @@ footer .newsletter .newsletterform .newsletterfields button[type="submit"].butto
 }
 
 /*Projects*/
-div.content main {
+body:not(.project) div.content main {
 	margin: 6rem 0;
 }
+
+main a section.project {
+	cursor: pointer;
+}
+
 main section.project {
 	margin: 2rem 0;
 	padding: 0 0 1rem 0;
 	border-radius: 8px;
 	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
-	cursor: pointer;
 	transition: all .4s ease-in-out;
 	z-index: 2;
 }
@@ -693,6 +699,7 @@ footer section.bottom div ul.social-icons li a:hover img {
 
 	/*Highlight current sites*/
 	.home header nav ul li.projects a:after,
+	.project header nav ul li.projects a:after,
 	.blog header nav ul li.blog a:after,
 	.philosophy header nav ul li.philosophy a:after,
 	.faq header nav ul li.faq a:after{
@@ -724,11 +731,26 @@ footer section.bottom div ul.social-icons li a:hover img {
 		}
 
 		header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel,
-		header .newslettermodal .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel,
 		footer .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
 			top: 1.2rem;
 			font-size: 1rem;
 			line-height: 1.2rem;
+		}
+
+		footer .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
+			left: 3.1rem;
+		}
+
+		header .newslettermodal .newsletterform .newsletterfields label.emaillabel {
+			left: 2.8rem;
+			top: 2.8rem;
+		}
+
+		header .newslettermodal .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
+			top: 1.2rem;
+			font-size: 1rem;
+			line-height: 1.2rem;
+			left: 2.8rem;
 		}
 
 		aside.modalNewsletter .modalContainer {

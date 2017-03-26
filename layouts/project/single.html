@@ -1,7 +1,4 @@
 {{ partial "head.html" . }}
-  <h1>{{ .Title }}</h1>
-  <h6>{{ .Date.Format "Mon, Jan 2, 2006" }}</h6>
-  {{ .Content }}
-  <h4><a href="{{ .Site.BaseURL }}">Home</a></h4>
-</body>
-</html>
+{{ partial "header.html" . }}
+{{ partial "project.html" . }}
+{{ partial "footer.html" . }}

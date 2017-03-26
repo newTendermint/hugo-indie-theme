@@ -1,0 +1,41 @@
+<main>
+	<div class="container container-fluid">
+		<div class="row center-xs middle-xs">
+			<div class="col-xs-12 col-sm-5">
+				<section class="project">
+					<header>
+						{{ if .Params.timeline }}
+						<span class="timeline">{{ .Params.timeline }}</span>
+						{{ end }}
+						{{ if .Params.header.image }}
+						<img src="/assets/{{ .Params.header.image }}" alt="{{ .Title }} Glyph">
+						{{ end }}
+					</header>
+					<div class="title">
+						<h3>{{ .Title }}</h3>
+						{{ if .Params.Summary }}
+						<p>{{ .Params.Summary }}</p>
+						{{ end }}
+					</div>
+					<div class="row center-xs around-xs">
+						<div class="col-xs-6 row">
+							<span class="col-xs-12 label">Learn</span>
+							{{ range .Params.tags }}
+							<span class="col-xs-12 learn">{{ . }}</span>
+							{{ end }}
+						</div>
+						<div class="col-xs-6 row">
+							<span class="col-xs-12 label">Goal</span>
+							{{ if .Params.goal }}
+							<span class="col-xs-12 goal tooltip" data-tip="Our goal is to make ${{ .Params.goal }} with this project" tabindex="1">${{ .Params.goal }}</span>
+							{{ end }}
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<section class="center-xs">
+		{{ .Content }}
+		</section>
+	</div>
+</main>
