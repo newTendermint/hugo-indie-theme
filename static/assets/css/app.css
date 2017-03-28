@@ -5,6 +5,7 @@
 
 body, html {
 	background: rgb(255, 255, 255);
+	line-height: 1.5;
 }
 
 a {
@@ -21,7 +22,8 @@ div.content {
 
 /*Header*/
 div.content header {
-	background-image: linear-gradient(180deg , #F6FDFF, rgb(255, 255, 255))
+	background-image: linear-gradient(180deg , #F6FDFF, rgb(255, 255, 255));
+	/* Background: */
 }
 
 header canvas#blurCanvas {
@@ -114,7 +116,7 @@ header nav ul li:not(.subscribebtn) a:before {
 	content: "";
 	position: absolute;
 	width: 100%;
-	height: .2rem;
+	height: .15rem;
 	bottom: -.4rem;
 	left: 0;
 	background-color: rgb(255,255,255);
@@ -706,7 +708,7 @@ footer section.bottom div ul.social-icons li a:hover img {
 		content: "";
 		position: absolute;
 		width: 100%;
-		height: .24rem;
+		height: .15rem;
 		bottom: -.4rem;
 		left: 0;
 		background-color: #1CA8D3;
