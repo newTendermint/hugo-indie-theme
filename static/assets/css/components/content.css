@@ -1,5 +1,5 @@
 /*Projects*/
-body:not(.project) div.content main {
+div.content main {
 	margin: 6rem 0;
 }
 

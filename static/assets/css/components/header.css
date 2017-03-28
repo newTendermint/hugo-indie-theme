@@ -30,7 +30,6 @@ header div.logo a {
 
 /*Nav*/
 header nav ul {
-	list-style-type: none;
 	padding: 0;
 	transition: all 1s ease;
 	padding-top: 8rem;
@@ -239,12 +238,4 @@ header nav input.menu-open:checked ~ ul li {
 /*Hero*/
 header .hero {
 	margin: 1rem auto;
-}
-
-header .hero p {
-	color: rgba(74, 74, 74, .8);
-	font-size: 1.2rem;
-	line-height: 1.6rem;
-	font-weight: 300;
-	letter-spacing: .02rem;
 }

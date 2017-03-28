@@ -58,6 +58,12 @@ footer .newsletter .newsletterform .newsletterfields input[type="email"].email:f
 	padding-left: 1rem;
 }
 
+header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~button[type="submit"].button,
+header .newslettermodal .newsletterform .newsletterfields input[type="email"].email:focus~button[type="submit"].button,
+footer .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~button[type="submit"].button {
+	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}
+
 /*Email Label*/
 header .newsletter .newsletterform .newsletterfields label.emaillabel,
 header .newslettermodal .newsletterform .newsletterfields label.emaillabel,
@@ -112,8 +118,7 @@ footer .newsletter .newsletterform .newsletterfields button[type="submit"].butto
 	letter-spacing: .1rem;
 	height: 4rem;
 	width: 4rem;
-	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
-	background-image: linear-gradient(to right, #1CA8D3, #00BCD4);
+	background-image: linear-gradient(to right, #3DC2E7, #1CA8D3);
 	transition: all .2s ease;
 }
 
