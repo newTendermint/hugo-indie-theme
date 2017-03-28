@@ -69,7 +69,7 @@
 								</ul>
 							</li>
 							{{ else }}
-							<li class="{{ if eq .Identifier "subscribebtn" }}col-xs-12 {{else}}col-xs-6 {{ end }}col-sm col-md col-lg {{ .Identifier }}"><a href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>{{ if eq .Identifier "subscribebtn" }}
+							<li class="{{ if eq .Identifier "subscribebtn" }}col-xs-12 {{else}}col-xs-6 {{ end }}col-sm col-md col-lg {{ .Identifier }}"><a href="{{ if eq .Identifier "subscribebtn" }}{{ .URL }}{{else}}{{ .URL | relLangURL }}{{ end }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>{{ if eq .Identifier "subscribebtn" }}
 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24"><g >
 									<path data-color="color-2" fill="#ffffff" d="M23,2H1C0.4,2,0,2.4,0,3v3c0,0.4,0.2,0.7,0.5,0.9l11,6C11.7,13,11.8,13,12,13s0.3,0,0.5-0.1
 									l11-6C23.8,6.7,24,6.4,24,6V3C24,2.4,23.6,2,23,2z"/>
@@ -100,7 +100,7 @@
 						<div class="row bottom-xs center-xs newsletterfields">
 							<input type="email" name="EMAIL" class="col-xs-12 col-sm-8 email" id="mce-EMAIL" required>
 							<label class="col-xs-12 col-sm-8 emaillabel">Enter your email</label>
-							<button type="submit" value="submit" name="subscribe" id="mc-embedded-subscribe" class="col-xs-12 col-sm-2 col-md-1 button">
+							<button type="submit" value="submit" name="subscribe" id="mc-embedded-subscribe" class="col-xs-12 col-sm-2 col-md-1 button" ga-on="click" ga-event-category="Newsletter" ga-event-action="Subscribe" ga-event-label="Header">
 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="36px" height="36px" viewBox="0 0 48 48"><g  transform="translate(0, 0)">
 									<path fill="#ffffff" d="M3.4,21l6.3,4.8l12.9-6.6c0.5-0.3,1,0.5,0.5,0.8L13,28.2h0l0,0v14c0,0.9,1.2,1.4,1.8,0.6l6.9-8.2L35.4,45&#10;&#9;c0.6,0.4,1.4,0.1,1.6-0.6l8-40c0.2-0.8-0.6-1.4-1.4-1.1l-40,16C2.9,19.6,2.8,20.6,3.4,21z"/>
 								</g></svg>
@@ -128,7 +128,7 @@
 								<div class="row bottom-xs center-xs newsletterfields">
 									<input type="email" name="EMAIL" class="col-xs-12 col-sm-8 email" id="mce-EMAIL" required>
 									<label class="col-xs-12 col-sm-8 emaillabel">Enter your email</label>
-									<button type="submit" value="submit" name="subscribe" id="mc-embedded-subscribe" class="col-xs-12 col-sm-2 button">
+									<button type="submit" value="submit" name="subscribe" id="mc-embedded-subscribe" class="col-xs-12 col-sm-2 button" ga-on="click" ga-event-category="Newsletter" ga-event-action="Subscribe" ga-event-label="Modal">
 										<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="36px" height="36px" viewBox="0 0 48 48"><g  transform="translate(0, 0)">
 											<path fill="#ffffff" d="M3.4,21l6.3,4.8l12.9-6.6c0.5-0.3,1,0.5,0.5,0.8L13,28.2h0l0,0v14c0,0.9,1.2,1.4,1.8,0.6l6.9-8.2L35.4,45&#10;&#9;c0.6,0.4,1.4,0.1,1.6-0.6l8-40c0.2-0.8-0.6-1.4-1.4-1.1l-40,16C2.9,19.6,2.8,20.6,3.4,21z"/>
 										</g></svg>
