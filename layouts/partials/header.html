@@ -84,12 +84,13 @@
 					</nav>
 				</div>
 			</section>
-			{{ if .IsHome }}
+
 			<!-- Hero -->
 			<section class="row middle-xs center-xs hero">
 				<h1 class="col-xs-10 col-md-8">{{ .Title }}</h1>
 				<p class="col-xs-10 col-md-6">{{ .Description }}</p>
 			</section>
+			{{ if .IsHome }}
 			{{ if .Site.Params.newsletter }}
 			{{ with .Site.Params.mailchimp }}
 			<!-- Newsletter -->

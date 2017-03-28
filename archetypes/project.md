@@ -2,6 +2,9 @@
 # Project summary
 summary = ""
 
+# Project description
+description = ""
+
 # Example: `tags = ["amazon", "saas"]`
 tags = []
 

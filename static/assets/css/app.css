@@ -491,6 +491,16 @@ main section.project span.goal {
 	font-size: 1.4rem;
 }
 
+/*Video*/
+main div.video {
+	background-color: #F2F2F2;
+	height: 50vw;
+}
+
+main div.video svg {
+	margin-top: 18vw;
+}
+
 /*Newsletter Modal*/
 aside.modalNewsletter {
 	position: fixed;
