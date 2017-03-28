@@ -13,7 +13,7 @@
 	{{ end }}
 	<div class="container container-fluid">
 		<div class="row center-xs middle-xs">
-			<div class="col-xs-12 col-sm-5">
+			<div class="col-xs-12 col-sm-8">
 				<h2>Summary</h2>
 				<section class="project">
 					<header>
@@ -33,7 +33,7 @@
 					<div class="row center-xs around-xs">
 						<div class="col-xs-6 row">
 							<span class="col-xs-12 label">Learn</span>
-							{{ range .Params.tags }}
+							{{ range .Params.learn }}
 							<span class="col-xs-12 learn">{{ . }}</span>
 							{{ end }}
 						</div>

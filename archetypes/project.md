@@ -14,6 +14,9 @@ video = ""
 # Project learnings
 learn = []
 
+# Project syllabus
+syllabus = []
+
 # Project mentor
 mentor = ""
 
