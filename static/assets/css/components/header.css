@@ -1,0 +1,250 @@
+/*Header*/
+div.content header {
+	background-image: linear-gradient(180deg , #F6FDFF, rgb(255, 255, 255));
+}
+
+/*Particles*/
+header canvas#blurCanvas {
+	height: 0;
+	z-index: 0;
+}
+
+header canvas#particles {
+	width: 100vw;
+	height: 100vh;
+	left:0%;
+	top:0%;
+	position:absolute;
+	z-index: 0;
+	visibility: hidden;
+}
+
+/*Logo*/
+header div.logo {
+	margin-top: 1.6rem;
+}
+
+header div.logo a {
+	z-index: 1;
+}
+
+/*Nav*/
+header nav ul {
+	list-style-type: none;
+	padding: 0;
+	transition: all 1s ease;
+	padding-top: 8rem;
+	height: 0;
+	visibility: hidden;
+	opacity: 0;
+	transition: height .4s ease-in-out, opacity .4s ease-out .4s;
+}
+
+header nav ul li {
+	padding: 2.5rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	display: none;
+	z-index: 1;
+}
+
+header nav ul li.projects {
+	margin-top: 2rem;
+	background-color: rgba(28, 168, 211, 1);
+}
+
+header nav ul li.blog {
+	margin-top: 2rem;
+	background-color: rgba(28, 168, 211, .9);
+}
+
+header nav ul li.philosophy {
+	background-color: rgba(28, 168, 211, .8);
+}
+
+header nav ul li.faq {
+	background-color: rgba(28, 168, 211, .7);
+}
+
+header nav ul li a {
+	letter-spacing: .1rem;
+}
+
+header nav ul li:not(.subscribebtn) a {
+	color: rgba(255, 255, 255, 1);
+	transition: all .5s ease;
+	text-transform: uppercase;
+	position: relative;
+}
+
+/*Navigation Link Hover Effect*/
+header nav ul li:not(.subscribebtn) a:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: .15rem;
+	bottom: -.4rem;
+	left: 0;
+	background-color: rgb(255,255,255);
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
+header nav ul li a:hover:before {
+	visibility: visible;
+	transform: scaleX(1);
+}
+
+/*Subscribe button in navigation*/
+header nav ul li.subscribebtn {
+	margin: .5rem 0;
+}
+
+header nav ul li.subscribebtn a svg {
+	margin-right: .4rem;
+}
+
+header nav ul li.subscribebtn a {
+	white-space: nowrap;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 4rem;
+	width: 60%;
+	padding: 0 2rem;
+	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+	background-image: linear-gradient(to right, #1CA8D3, #00BCD4);
+	border-radius: 5px;
+	font-size: 1rem;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	color: #fff;
+	transition: all .2s ease;
+}
+
+header nav ul li.subscribebtn a:hover {
+	transform: translateY(-1px);
+	background-image: linear-gradient(to right, #00BCD4, #1CA8D3);
+	box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
+}
+
+header nav ul li.subscribebtn a:active {
+	color: #1CA8D3;
+	background-image: linear-gradient(to right, #f6f9ff, #f6f9ff);
+	transform: translateY(1px);
+	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}
+
+/*Menu*/
+header nav label.menu-open-button {
+	background: #1CA8D3;
+	border-radius: 100%;
+	width: 4rem;
+	height: 4rem;
+	/*Half of width*/
+	margin-left: -2rem;
+	margin-top: 2.4rem;
+	position: absolute;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 5rem;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transition: -webkit-transform ease-out .2s;
+	transition: -webkit-transform ease-out .2s;
+	transition: transform ease-out .2s;
+	transition: transform ease-out .2s, -webkit-transform ease-out .2s;
+	z-index: 2;
+	-webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	-webkit-transition-duration: .4s;
+	transition-duration: .4s;
+	-webkit-transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+	transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+	cursor: pointer;
+	box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.14);
+}
+
+header nav input.menu-open {
+	display: none;
+}
+
+header nav label.menu-open-button span.lines {
+	width: 25px;
+	height: 3px;
+	background: #ffffff;
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -12.5px;
+	margin-top: -1.5px;
+	-webkit-transition: -webkit-transform .2s;
+	transition: -webkit-transform .2s;
+	transition: transform .2s;
+	transition: transform .2s, -webkit-transform .2s;
+}
+
+header nav label.menu-open-button span.line-1 {
+	-webkit-transform: translate3d(0, -8px, 0);
+	transform: translate3d(0, -8px, 0);
+}
+
+header nav label.menu-open-button span.line-2 {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+header nav label.menu-open-button span.line-3 {
+	-webkit-transform: translate3d(0, 8px, 0);
+	transform: translate3d(0, 8px, 0);
+	width: 18px;
+}
+
+header nav input.menu-open:checked + .menu-open-button .line-1 {
+	-webkit-transform: translate3d(0, 0, 0) rotate(45deg);
+	transform: translate3d(0, 0, 0) rotate(45deg);
+}
+
+header nav input.menu-open:checked + .menu-open-button .line-2 {
+	-webkit-transform: translate3d(0, 0, 0) scale(0.1, 1);
+	transform: translate3d(0, 0, 0) scale(0.1, 1);
+}
+
+header nav input.menu-open:checked + .menu-open-button .line-3 {
+	-webkit-transform: translate3d(0, 0, 0) rotate(-45deg);
+	transform: translate3d(0, 0, 0) rotate(-45deg);
+	width: 25px;
+}
+
+header nav label.menu-open-button:hover {
+	-webkit-transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+	transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+header nav input.menu-open:checked ~ ul {
+	height: 29rem;
+	visibility: visible;
+	opacity: 1;
+}
+
+header nav input.menu-open:checked ~ ul li {
+	display: flex;
+}
+
+/*Hero*/
+header .hero {
+	margin: 1rem auto;
+}
+
+header .hero p {
+	color: rgba(74, 74, 74, .8);
+	font-size: 1.2rem;
+	line-height: 1.6rem;
+	font-weight: 300;
+	letter-spacing: .02rem;
+}

@@ -1,0 +1,185 @@
+/*Responsiveness*/
+/*sm*/
+@media only screen and (min-width: 48em) {
+
+	header a .logotype {
+		margin-top: 0;
+	}
+
+	header div.logo {
+		margin-top: 0;
+	}
+
+	header nav .menu-open-button {
+		display: none;
+	}
+
+	header nav ul {
+		margin-top: 2rem;
+		padding-top: 0;
+		visibility: visible;
+		opacity: 1;
+		height: unset;
+	}
+
+	header nav input.menu-open:checked ~ ul {
+		height: unset;
+	}
+
+	header nav ul li {
+		margin: 1rem auto;
+		display: flex;
+		padding: 0;
+	}
+
+	header nav ul li.projects,
+	header nav ul li.blog,
+	header nav ul li.philosophy,
+	header nav ul li.faq {
+		background-color: rgba(0,0,0,0);
+		margin-top: 1rem;
+	}
+
+	header nav ul li:not(.subscribebtn) a {
+		color: #1CA8D3;
+	}
+
+	header nav ul li:not(.subscribebtn) a:before {
+		background-color: #1CA8D3;
+	}
+
+	div.content header canvas#particles {
+		visibility: visible;
+	}
+
+	/*Highlight current sites*/
+	.home header nav ul li.projects a:after,
+	.project header nav ul li.projects a:after,
+	.blog header nav ul li.blog a:after,
+	.philosophy header nav ul li.philosophy a:after,
+	.faq header nav ul li.faq a:after{
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: .15rem;
+		bottom: -.4rem;
+		left: 0;
+		background-color: #1CA8D3;
+		-webkit-transition: all 0.3s ease-in-out 0s;
+		transition: all 0.3s ease-in-out 0s;
+	}
+
+	/*Hero*/
+	header .hero {
+		margin: 4rem auto;
+	}
+
+	header nav ul li.subscribebtn a {
+		height: 2.4rem;
+		margin-left: 2rem;
+	}
+
+	header .newsletter .newsletterform .newsletterfields label.emaillabel,
+	footer .newsletter .newsletterform .newsletterfields label.emaillabel {
+		top: 2.7rem;
+		left: 2.7rem;
+	}
+
+	header .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel,
+	footer .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
+		top: 1.2rem;
+		font-size: 1rem;
+		line-height: 1.2rem;
+	}
+
+	footer .newsletter .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
+		left: 3.1rem;
+	}
+
+	header .newslettermodal .newsletterform .newsletterfields label.emaillabel {
+		left: 2.8rem;
+		top: 2.8rem;
+	}
+
+	header .newslettermodal .newsletterform .newsletterfields input[type="email"].email:focus~label.emaillabel {
+		top: 1.2rem;
+		font-size: 1rem;
+		line-height: 1.2rem;
+		left: 2.8rem;
+	}
+
+	aside.modalNewsletter .modalContainer {
+		left: unset;
+	}
+
+	footer div.logo {
+		margin-bottom: 0;
+	}
+
+	footer div.cta {
+		margin-bottom: 6rem;
+	}
+
+	footer section.bottom {
+		padding-bottom: 1rem;
+	}
+
+	footer section.bottom div ul.social-icons {
+		margin-bottom: 0;
+	}
+
+	footer section.bottom div ul.copy li {
+		margin-bottom: 0;
+		margin-top: .4rem;
+	}
+
+	footer section.bottom div ul.legal  {
+		margin-top: 0;
+	}
+
+	footer .newsletter .newsletterform {
+		margin-bottom: 0;
+	}
+}
+
+/*md*/
+@media only screen and (min-width: 64em) {
+
+	header nav ul li.subscribebtn a {
+		width: 100%;
+		height: 2.4rem;
+	}
+
+	header .newsletter .newsletterform .newsletterfields label.emaillabel {
+		left: 6rem;
+	}
+
+	footer .newsletter .newsletterform .newsletterfields label.emaillabel {
+		left: 2.7rem;
+	}
+}
+
+/*lg*/
+@media only screen and (min-width: 75em) {
+
+	header nav ul {
+		margin-top: 1rem;
+	}
+
+	/*Layout*/
+	header .container {
+		max-width: 70rem;
+	}
+
+	main .container {
+		max-width: 60rem;
+	}
+
+	header .newsletter .newsletterform .newsletterfields label.emaillabel {
+		left: 6.3rem;
+	}
+
+	aside.modalNewsletter .modalContainer {
+		max-width: 34rem;
+	}
+}

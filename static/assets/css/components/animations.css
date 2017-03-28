@@ -1,0 +1,21 @@
+/*Animations*/
+@keyframes type {
+	0% {
+		width: 0;
+	}
+	20% {
+		width: 10rem;
+	}
+	80% {
+		width: 10rem;
+	}
+	100% {
+		width: 10rem;
+	}
+}
+
+@keyframes blink {
+	50% {
+		border-color: transparent;
+	}
+}

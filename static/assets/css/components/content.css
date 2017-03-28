@@ -1,0 +1,90 @@
+/*Projects*/
+body:not(.project) div.content main {
+	margin: 6rem 0;
+}
+
+main a section.project {
+	cursor: pointer;
+}
+
+main section.project {
+	margin: 2rem 0;
+	padding: 0 0 1rem 0;
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+	transition: all .4s ease-in-out;
+	z-index: 2;
+}
+
+main section.project:hover {
+	transform: scale(1.05);
+	box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
+}
+
+main section.project header {
+	background-image: linear-gradient(to right, #1CA8D3, #00BCD4);
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	position: relative;
+}
+
+main section.project header .timeline {
+	position: absolute;
+	left: 1rem;
+	top: .4rem;
+	background-color: #fff;
+	padding: .4rem;
+	border-radius: 3px;
+	box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+	font-weight: 600;
+}
+
+main section.project header img {
+	margin: 2rem 0;
+}
+
+main section.project .title {
+	margin: 2rem 0;
+}
+
+main section.project h3 {
+	color: #3DC2E7;
+	letter-spacing: .01rem;
+	font-size: 1.4rem;
+}
+
+main section.project p {
+	color: rgba(74, 74, 74, 1);
+	font-weight: 300;
+	letter-spacing: .01rem;
+}
+
+main section.project span {
+	color: rgba(74, 74, 74, 1);
+	letter-spacing: .01rem;
+	margin: .4rem 0;
+}
+
+main section.project span.label {
+	font-weight: 600;
+}
+
+main section.project span.learn {
+	font-weight: 300;
+}
+
+main section.project span.goal {
+	font-weight: 600;
+	color: #3DC2E7;
+	font-size: 1.4rem;
+}
+
+/*Video*/
+main div.video {
+	background-color: #F2F2F2;
+	height: 50vw;
+}
+
+main div.video svg {
+	margin-top: 18vw;
+}

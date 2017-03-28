@@ -1,0 +1,13 @@
+/*Global*/
+* {
+	font-family: 'Fira Sans', sans-serif;
+}
+
+body, html {
+	line-height: 1.5;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+}
