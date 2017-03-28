@@ -22,7 +22,6 @@
 							</svg>
 						</div>
 						<!-- Type -->
-						<!-- <div class="col-xs-12 col-sm-6 col-lg-9 bottom-xs middle-sm start-sm logotype">Indie Academy</div> -->
 						<div class="col-xs-6 col-sm-6 col-lg-9 middle-xs start-xs logotype">
 							<svg width="106px" height="61px" viewBox="703 307 144 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 								<desc>Indie Academy Logo type</desc>
@@ -84,12 +83,34 @@
 					</nav>
 				</div>
 			</section>
-
+			<!-- Project Header -->
+			{{ if eq .Section "project" }}
+			<!-- Project Hero -->
+			<div class="row center-xs top-sm">
+				<div class="col-xs-12 col-sm-6">
+					<section class="row center-xs middle-xs start-sm hero">
+						<h1 class="col-xs-10">{{ .Title }}</h1>
+						<p class="col-xs-10">{{ .Description }}</p>
+					</section>
+				</div>
+				<div class="col-xs-12 col-sm-6 syllabus">
+					<section class="row center-xs middle-xs end-sm hero">
+						<h1 class="col-xs-10">What you'll learn</h1>
+						<ul class="row center-xs end-sm align-xs">
+						{{ range .Params.syllabus }}
+							<li class="col-xs-6"><a href="#"><span>{{ . }}</span></a></li>
+						{{ end }}
+						</ul>
+					</section>
+				</div>
+			</div>
+			{{else}}
 			<!-- Hero -->
 			<section class="row middle-xs center-xs hero">
 				<h1 class="col-xs-10 col-md-8">{{ .Title }}</h1>
 				<p class="col-xs-10 col-md-6">{{ .Description }}</p>
 			</section>
+			{{ end }}
 			{{ if .IsHome }}
 			{{ if .Site.Params.newsletter }}
 			{{ with .Site.Params.mailchimp }}

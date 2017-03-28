@@ -239,3 +239,41 @@ header nav input.menu-open:checked ~ ul li {
 header .hero {
 	margin: 1rem auto;
 }
+
+/*Syllabus*/
+header div.syllabus section ul {
+	padding: 0;
+	transition: all 1s ease;
+}
+
+header div.syllabus section ul li {
+	height: 4rem;
+}
+
+header div.syllabus section ul li a {
+	line-height: 4rem;
+	height: 100%;
+}
+
+header div.syllabus section ul li a span {
+	color: rgb(255, 255, 255);
+}
+
+header div.syllabus section ul li:first-child {
+	background-color: rgba(28, 168, 211, 1);
+}
+header div.syllabus section ul li:nth-child(2) {
+	background-color: rgba(28, 168, 211, .9);
+}
+
+header div.syllabus section ul li:nth-child(3) {
+	background-color: rgba(28, 168, 211, .8);
+}
+
+header div.syllabus section ul li:nth-child(4) {
+	background-color: rgba(28, 168, 211, .7);
+}
+
+header div.syllabus section ul li:nth-child(5) {
+	background-color: rgba(28, 168, 211, .6);
+}
