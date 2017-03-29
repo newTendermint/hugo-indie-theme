@@ -18,3 +18,8 @@ main li,
 	font-weight: 300;
 	letter-spacing: .02rem;
 }
+
+p {
+	line-height: 2;
+	text-align: justify;
+}
