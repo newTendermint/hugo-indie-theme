@@ -19,7 +19,7 @@ main li,
 	letter-spacing: .02rem;
 }
 
-p {
+p:not(.projectdesc) {
 	line-height: 2;
 	text-align: justify;
 }
