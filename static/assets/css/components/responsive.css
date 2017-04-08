@@ -162,8 +162,12 @@
 /*lg*/
 @media only screen and (min-width: 75em) {
 
+	header .top {
+		padding-top: 1rem;
+	}
+
 	header nav ul {
-		margin-top: 1rem;
+		margin-top: 0;
 	}
 
 	/*Layout*/

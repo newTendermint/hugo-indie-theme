@@ -1,3 +1,4 @@
+{{ $syllabus := .Params.syllabus }}
 <main>
 	{{ if .Params.video }}
 	<div class="video">
@@ -6,7 +7,7 @@
 			<defs></defs>
 			<g id="play" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(70.468750, 465.714286)">
 				<rect fill-opacity="0.7" fill="#4A4A4A" x="0" y="0" width="224.21875" height="141.320197" rx="4"></rect>
-				<polygon id="Triangle" fill="#FFFFFF" points="144.140625 70.6600985 80.078125 102.778325 80.078125 38.5418719"></polygon>
+				<polygon id="Triangle" fill="#FFFFFF" points="144.140625 70.6600985 80.078125 102.778325 80.078125 38.5418719"></polygon>i
 			</g>
 		</svg>
 	</div>
@@ -50,6 +51,19 @@
 		<div class="row center-xs middle-xs">
 			<section class="col-xs-10">
 				{{ .Content }}
+			</section>
+		</div>
+		<div class="row center-xs middle-xs syllabus">
+			<section class="col-xs-10">
+				<!-- TODO -->
+				{{- range (where .Data.Pages "Section" "lesson") }}
+					{{ .Title }}
+				{{ end }}
+				<!-- TODO -->
+				{{ range $syllabus }}
+					{{ $title := . }}
+					<span class="col-xs-12 learn">{{ $title }}</span>
+				{{ end }}
 			</section>
 		</div>
 	</div>
