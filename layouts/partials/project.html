@@ -55,15 +55,12 @@
 		</div>
 		<div class="row center-xs middle-xs syllabus">
 			<section class="col-xs-10">
-				<!-- TODO -->
-				{{- range (where .Data.Pages "Section" "lesson") }}
-					{{ .Title }}
-				{{ end }}
-				<!-- TODO -->
-				{{ range $syllabus }}
-					{{ $title := . }}
-					<span class="col-xs-12 learn">{{ $title }}</span>
-				{{ end }}
+					{{- range (where .Site.Pages "Section" "lesson") }}
+					{{ $title := .Title }}
+						{{ if in $.Params.Syllabus $title }}
+							<span class="col-xs-12 learn">{{ $title }}</span>
+						{{ end }}
+					{{ end }}
 			</section>
 		</div>
 	</div>
